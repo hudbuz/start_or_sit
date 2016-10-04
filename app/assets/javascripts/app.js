@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router', 'templates'])
+  .module('app', ['ui.router', 'templates', 'Devise'])
   .config(function($stateProvider, $urlRouterProvider){
 
     $stateProvider
@@ -7,10 +7,31 @@ angular
       url: '/', 
       templateUrl: 'home.html'
       })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'auth/login.html',
+        controller: 'authCtrl',
+        onEnter: ['$state', 'Auth', function($state, Auth) {
+          Auth.currentUser().then(function (){
+            $state.go('home.team');
+          })
+        }]
+      })
+      .state('register', {
+        url: '/register',
+        templateUrl: 'register.html',
+        controller: 'authCtrl',
+        onEnter: ['$state', 'Auth', function($state, Auth) {
+          Auth.currentUser().then(function (){
+            $state.go('home.team');
+          })
+        }]
+})
 
     .state('home.team', {
       url: 'team', 
-      templateUrl: 'team/team.html'
+      templateUrl: 'team/team.html', 
+      controller: 'TeamController as team'
     })
     .state('home.qb', {
       url: 'qb', 
