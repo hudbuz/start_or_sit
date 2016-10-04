@@ -3,23 +3,21 @@
 
   <h2>Wide Receivers</h2>
 
-  Your starter<input ng-model="player.left" ng-change="player.searchFilter()"></input>
+  Your starter<input ng-model="player.left" ng-change="player.searchFilter()" ng-model-options="{debounce: 1000}"></input>
 
 
 
-  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()"></input>
+  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()" ng-model-options="{debounce: 1000}"></input>
 
 
 
 <br><br><br>
 
-{{player.searchedList[0].name}}
-{{player.searchedList[0].team_name}}
-{{player.searchedList[0].player_id}}
 
-
-
-
+{{player.searchedList.name}}
+{{player.searchedList.teamAbbr}}
+{{player.searchedList.player_id}}
+<img src='{{player.stock}}'>
 
 
 

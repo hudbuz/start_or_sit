@@ -8,19 +8,17 @@
 
 
 
-  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()"></input>
+  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()" ng-model-options="{debounce: 1000}"></input>
 
 
 
 <br><br><br>
-{{player.searchedList}}
+
+
 {{player.searchedList.name}}
-{{player.searchedList.team_name}}
+{{player.searchedList.teamAbbr}}
 {{player.searchedList.player_id}}
 <img src='{{player.stock}}'>
-
-
-
 
 
 

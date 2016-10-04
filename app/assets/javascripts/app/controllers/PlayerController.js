@@ -18,7 +18,7 @@ function PlayerController(players, $filter, position, PlayerService) {
 
 
     player.searchFilter = function() {
-    
+     
       search = $filter('filter')(player.filteredList, player.left)
       PlayerService.getPlayer(search[0].player_id).then(function(resp){
        

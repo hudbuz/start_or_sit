@@ -22,9 +22,14 @@ gem 'active_model_serializers'
 gem 'bower-rails'
 gem 'pry'
 gem 'launchy'
+gem 'devise'
 gem 'faraday'
 gem 'responders'
 gem 'angular-rails-templates', '~> 1.0'
+gem 'rails-assets-bootstrap-sass-official'
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
