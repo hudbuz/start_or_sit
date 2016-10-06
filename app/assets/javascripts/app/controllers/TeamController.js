@@ -1,6 +1,6 @@
 (function() {
   
-function TeamController($scope, Auth, userTeam, $state, $$state, players, $filter) {
+function TeamController($scope, Auth, userTeam, $state, $$state, players, $filter, TeamService) {
 
   var team = this
   team.user = {}
@@ -31,8 +31,14 @@ function TeamController($scope, Auth, userTeam, $state, $$state, players, $filte
     var searchedPlayer = $filter('filter')(filtered, team[position])
     team[position] = searchedPlayer[0]
     team[position]['img_url'] = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+searchedPlayer[0].esbid+'.png'
-    debugger
+   
     
+  }
+
+  team.createTeam = function() {
+
+    debugger
+    resp = TeamService.createTeam(team.lineup.id, team)
   }
 
    

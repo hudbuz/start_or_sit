@@ -9,7 +9,7 @@ class TeamsController < ApplicationController
 
 
   def create
-    binding.pry
+   
   end
 
   def show
@@ -20,6 +20,12 @@ class TeamsController < ApplicationController
   end
 
   def update
+    binding.pry
+    @team = Team.find(params['lineup']['id'])
+    @team.update_team(params)
+    binding.pry
+
+    render json: @team
 
   end
 

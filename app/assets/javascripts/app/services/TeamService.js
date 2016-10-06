@@ -10,8 +10,9 @@
       }
       
     }
-      this.createTeam = function() {
-        return $http.post('http://localhost:3000/teams')
+      this.createTeam = function(id, data) {
+        debugger
+        return $http.patch('http://localhost:3000/teams/'+id, data)
       }
 
 

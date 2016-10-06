@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'application#index'
-  resources :teams, only: [:index, :create, :show, :update]
+  resources :teams
   resources :players, only: [:index, :show]
   resources :indices, only: [:index]
   get 'download' => 'player_data#download'

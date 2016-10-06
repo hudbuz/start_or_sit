@@ -1,0 +1,37 @@
+{:uriI"file://app/assets/javascripts/templates/team/teamForm.html?type=text/ng-html&id=8ea13db9c13d94d17b29e7f2953a32db2a283f1f4a6b9a7212c400eb15d3107d:ET:load_pathI"app/assets/javascripts;T:filenameI"8app/assets/javascripts/templates/team/teamForm.html;T:	nameI"templates/team/teamForm;T:logical_pathI"!templates/team/teamForm.html;T:content_typeI"text/ng-html;T:sourceI"0Select Your Players
+
+
+
+
+<table style='50%'>
+
+<tr>
+<th> Your Team </th>
+<th> Edit Team</th>
+
+</tr>
+<tr id="qb"><td id="qb_pic"><img src="{{team.qb.img_url}}"></td>
+ <td><label>QB: <input ng-model="team.qb.name" ng-change="team.searchFilter('qb')" ng-model-options="{debounce: 500}">{{team.qb[0].name}}</input></label></td>
+</tr>
+<tr id="rb"><td id="rb_pic"><img src="{{team.rb.img_url}}"></td>
+ <td><label>RB: <input ng-model="team.rb.name" ng-change="team.searchFilter('rb')" ng-model-options="{debounce: 500}">{{team.rb[0].name}}</input></label></td>
+</tr>
+<tr id="wr"><td id="wr_pic"><img src="{{team.wr.img_url}}"></td>
+ <td><label>WR: <input ng-model="team.wr.name" ng-change="team.searchFilter('wr')" ng-model-options="{debounce: 500}">{{team.wr[0].name}}</input></label></td>
+</tr>
+<tr id="te"><td id="te_pic"><img src="{{team.te.img_url}}"></td>
+ <td><label>TE: <input ng-model="team.te.name" ng-change="team.searchFilter('te')" ng-model-options="{debounce: 500}">{{team.te[0].name}}</input></label></td>
+</tr>
+
+
+</table>
+
+
+
+
+<button ng-click="team.createTeam()"/>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ffile-digest://app/assets/javascripts/templates/team/teamForm.html;TT:charsetI"
+utf-8;F:digest"%& eËVÃÛåŸâÀ#ª9-ùº‡À­ÕÔn_`^UŸ:lengthi0:dependencies_digest"%ÄÆ¶W’¼;+ŠÔqMf£XÔ¤v;ùİ‰:idI"E8ea13db9c13d94d17b29e7f2953a32db2a283f1f4a6b9a7212c400eb15d3107d;F:
+mtimel+—ÇöW
