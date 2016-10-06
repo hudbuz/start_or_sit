@@ -1,17 +1,0 @@
-{:uriI"‡file://app/assets/javascripts/templates/home.html?type=text/ng-html&id=b9aeadea3b508145d11528eeca3fb95e41741ca0007b45770f3449bf95310fce:ET:load_pathI"app/assets/javascripts;T:filenameI"/app/assets/javascripts/templates/home.html;T:	nameI"templates/home;T:logical_pathI"templates/home.html;T:content_typeI"text/ng-html;T:sourceI"
-<div class="nav">
-<a ui-sref="home">Home</a>
-
- <a ui-sref="home.team">Team</a>
- <a ui-sref="home.qb">Quarterback</a>
- <a ui-sref="home.rb">Running Back</a>
- <a ui-sref="home.wr">Wide Receiver</a>
- <a ui-sref="home.te">Tight End</a>
- 
-</div>
-afsdfsdaf
-<ui-view></ui-view>;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"=file-digest://app/assets/javascripts/templates/home.html;TT:charsetI"
-utf-8;F:digest"%\ÔêÂÅòâ„”ãw8ˆ;0Ÿ ÅçÙÿø­A”P/:lengthi:dependencies_digest"%iÅÛşW¬xŸ\ÉnPTò1ÀÎ*`´	eÁHÇ|BŒÌ:idI"Eb9aeadea3b508145d11528eeca3fb95e41741ca0007b45770f3449bf95310fce;F:
-mtimel+¼óW

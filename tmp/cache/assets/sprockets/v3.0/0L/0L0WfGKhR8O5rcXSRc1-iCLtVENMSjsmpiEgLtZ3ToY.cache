@@ -1,0 +1,16 @@
+{:uriI"éfile://app/assets/javascripts/templates/stats/stats.html?type=text/ng-html&id=19c870f59d9524989ad5772a0597f706e0e8580f68b8284c83e061b3f4bb8aa4:ET:load_pathI"app/assets/javascripts;T:filenameI"6app/assets/javascripts/templates/stats/stats.html;T:	nameI"templates/stats/stats;T:logical_pathI"templates/stats/stats.html;T:content_typeI"text/ng-html;T:sourceI"@<div ng-if="player.left !== ''"><br>
+  <img src='{{player.stock}}'>
+  <h3 id="playerName">{{player.searchedList.name}}, {{player.searchedList.position}} - {{player.searchedList.teamAbbr}}</h3>
+
+
+
+
+Week {{player.current_week}}<br>
+This Week's Matchup: {{player.searchedList.weeks[player.current_week-1].opponent}}
+
+</div>;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Dfile-digest://app/assets/javascripts/templates/stats/stats.html;TT:charsetI"
+utf-8;F:digest"%(@X@ÙX!Ω[TTá¿kÚ∆5)Ù8≠*@+—*⁄_w:lengthi@:dependencies_digest"%l~lVQ‹UQBÙÜ
+ÌJNJ„√7*TW∑≤‘Î<a:idI"E19c870f59d9524989ad5772a0597f706e0e8580f68b8284c83e061b3f4bb8aa4;F:
+mtimel+ızıW

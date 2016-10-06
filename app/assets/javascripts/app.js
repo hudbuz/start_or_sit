@@ -19,7 +19,7 @@ angular
       })
       .state('register', {
         url: '/register',
-        templateUrl: 'register.html',
+        templateUrl: 'auth/register.html',
         controller: 'authCtrl',
         onEnter: ['$state', 'Auth', function($state, Auth) {
           Auth.currentUser().then(function (){
@@ -31,7 +31,13 @@ angular
     .state('home.team', {
       url: 'team', 
       templateUrl: 'team/team.html', 
-      controller: 'TeamController as team'
+      controller: 'TeamController as team', 
+      resolve: {
+        userTeam: function(TeamService, $http){
+          return TeamService.getTeam
+        }
+
+      }
     })
     .state('home.qb', {
       url: 'qb', 
@@ -43,7 +49,10 @@ angular
           return PlayerService.getPlayers()
           
 
-      }, 
+      },
+      indexTable: function(IndexService, $http) {
+        return IndexService.getIndices()
+      },  
       position: function() {
         return "QB"
       }
@@ -58,7 +67,10 @@ angular
           
           return PlayerService.getPlayers()
           
-      }, 
+      },
+      indexTable: function(IndexService, $http) {
+        return IndexService.getIndices()
+      },   
       position: function() {
         return "RB"
       }
@@ -73,7 +85,10 @@ angular
           
           return PlayerService.getPlayers()
           
-      }, 
+      },
+      indexTable: function(IndexService, $http) {
+        return IndexService.getIndices()
+      },   
       position: function() {
         return "WR"
       }
@@ -88,7 +103,10 @@ angular
           
           return PlayerService.getPlayers()
           
-      }, 
+      },
+      indexTable: function(IndexService, $http) {
+        return IndexService.getIndices()
+      },   
       position: function() {
         return "TE"
       }

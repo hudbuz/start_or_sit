@@ -1,0 +1,17 @@
+<div ng-if="player.left !== ''"><br>
+  <img src='{{player.stock}}'>
+  <h3 id="playerName">{{player.searchedList.name}}, {{player.searchedList.position}} - {{player.searchedList.teamAbbr}}</h3>
+
+
+<div class="stats">
+
+Week {{player.current_week}}<br>
+This Week's Matchup: {{player.searchedList.weeks[player.current_week-1].opponent}}
+
+
+<h4>Stats</h4>
+<div ng-repeat="(name,stat) in player.stats">
+  <li>{{name}}: {{stat}}</li>
+</div>
+</div>
+</div>

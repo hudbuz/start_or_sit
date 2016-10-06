@@ -1,22 +1,31 @@
 (function() {
   
-function TeamController($scope, Auth) {
+function TeamController($scope, Auth, userTeam, $state, $$state) {
 
   var team = this
+  team.user = {}
+  team.user.lineup = userTeam
+
+  team.authorize = function() {
+
+  if (Auth.currentUser().$$state.status > 0) {
+    
+    team.user = Auth.currentUser().$$state.value
+
+  }
+  else {
+ 
+    $state.go('login')
+  }
+}
 
 
-  Auth.currentUser()
-    .then(function(user){
-      console.log(user)
-      team.user = user
-     
-    })
 
-    debugger
+   
   
   
 
-
+  team.authorize()
 
 }
 

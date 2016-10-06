@@ -4,25 +4,18 @@
   <h2>Tight Ends</h2>
 
 
-   Your starter<input ng-model="player.left" ng-change="player.searchFilter()" ng-model-options="{debounce: 1000}"></input>
+   Your starter<input ng-model="player.left" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
 
 
 
-  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()" ng-model-options="{debounce: 1000}"></input>
+  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
 
 
 
 
 <br><br><br>
 
-
-{{player.searchedList.name}}
-{{player.searchedList.teamAbbr}}
-{{player.searchedList.player_id}}
-<img src='{{player.stock}}'>
-
-
-
+<stats></stats>
 
 
 

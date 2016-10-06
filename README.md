@@ -29,12 +29,13 @@ Things you may want to cover:
 
 
 
-get player search to work
-trigger player get api on player search
+
+
 
 new team 
 team model set up
-team api 
+
+team api
 get team data to load player.left
 
 

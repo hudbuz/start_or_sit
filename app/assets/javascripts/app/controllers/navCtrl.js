@@ -5,7 +5,7 @@ function navCtrl($scope, Auth){
     $scope.logout = Auth.logout;
 
     Auth.currentUser().then(function (user){
-        debugger
+        
         $scope.user = user;
     });
 
