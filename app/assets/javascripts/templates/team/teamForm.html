@@ -1,0 +1,27 @@
+Select Your Players
+
+
+
+
+<table style='50%'>
+
+<tr>
+<th> Your Team </th>
+<th> Edit Team</th>
+
+</tr>
+<tr id="qb"><td id="qb_pic"><img src="{{team.qb.img_url}}">No Player Selected</td>
+ <td><input ng-model="team.qb.name" ng-change="team.searchFilter('qb')" ng-model-options="{debounce: 500}">{{team.qb[0].name}}</input></td>
+</tr>
+<tr id="rb"><td id="rb_pic"><img src="{{team.rb.img_url}}">No Player Selected</td>
+ <td><input ng-model="team.rb.name" ng-change="team.searchFilter('rb')" ng-model-options="{debounce: 500}">{{team.rb[0].name}}</input></td>
+</tr>
+<tr id="wr"><td id="wr_pic"><img src="{{team.wr.img_url}}">No Player Selected</td>
+ <td><input ng-model="team.wr.name" ng-change="team.searchFilter('wr')" ng-model-options="{debounce: 500}">{{team.wr[0].name}}</input></td>
+</tr>
+<tr id="te"><td id="te_pic"><img src="{{team.te.img_url}}">No Player Selected</td>
+ <td><input ng-model="team.te.name" ng-change="team.searchFilter('te')" ng-model-options="{debounce: 500}">{{team.te[0].name}}</input></td>
+</tr>
+
+
+</table>

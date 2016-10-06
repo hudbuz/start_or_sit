@@ -1,0 +1,31 @@
+{:uriI"file://app/assets/javascripts/templates/team/teamForm.html?type=text/ng-html&id=6c8360890a10f255c9d3a4d92896c5e9697ac75f3eaf1352dd0d66ad6443926c:ET:load_pathI"app/assets/javascripts;T:filenameI"8app/assets/javascripts/templates/team/teamForm.html;T:	nameI"templates/team/teamForm;T:logical_pathI"!templates/team/teamForm.html;T:content_typeI"text/ng-html;T:sourceI"(Select Your Players
+
+
+
+
+<table style='50%'>
+
+<tr>
+<th> Your Team </th>
+<th> Edit Team</th>
+
+</tr>
+<tr id="qb"><td id="qb_pic">No Player Selected</td>
+ <td><input ng-model="team.qb" ng-change="team.searchFilter" ng-model-options="{debounce: 500}"></input></td>
+</tr>
+<tr id="rb"><td id="rb_pic">No Player Selected</td>
+ <td><input ng-model="team.rb" ng-change="team.searchFilter()" ng-model-options="{debounce: 500}">{{team.user.username}}</input></td>
+</tr>
+<tr id="wr"><td id="wr_pic">No Player Selected</td>
+ <td><input ng-model="team.wr" ng-change="team.searchFilter()" ng-model-options="{debounce: 500}"></input></td>
+</tr>
+<tr id="te"><td id="te_pic">No Player Selected</td>
+ <td><input ng-model="team.te" ng-change="team.searchFilter()" ng-model-options="{debounce: 500}"></input></td>
+</tr>
+
+
+</table>;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ffile-digest://app/assets/javascripts/templates/team/teamForm.html;TT:charsetI"
+utf-8;F:digest"%-¸´zôµ½»Ü³,	à[b½}ğßªË>WËGú±§É¾:lengthi(:dependencies_digest"%K@]BI%¹6T_Æœi`o–ËºŸ ø›˜uõWé<L ¬:idI"E6c8360890a10f255c9d3a4d92896c5e9697ac75f3eaf1352dd0d66ad6443926c;F:
+mtimel+-«öW

@@ -3,19 +3,14 @@
 
 Welcome {{team.user.username}}
 
-
-<h3>Select Your Team</h3>
-<table style='50%'>
-
-<tr>
-<th> Your Team </th>
-<th> Edit Team</th>
-
-</tr>
-<tr id="qb"><td>Wentz</td> <td><i</td></tr>
-<tr id="rb"><td>Sproles</td>></tr>
-<tr id="wr"><td>Matthews</td></tr>
-<tr id="te"><td>Ertz</td></tr>
+{{team.lineup}}
 
 
-</table>
+
+<div ng-if="team.lineup.players.length < 1">
+
+  <tform>
+
+  </tform>
+
+</div>

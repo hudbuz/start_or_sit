@@ -10,6 +10,7 @@ function navCtrl($scope, Auth){
     });
 
     $scope.$on('devise:new-registration', function (e, user){
+        
         $scope.user = user;
     });
 

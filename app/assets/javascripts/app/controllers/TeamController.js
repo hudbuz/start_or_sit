@@ -1,14 +1,21 @@
 (function() {
   
-function TeamController($scope, Auth, userTeam, $state, $$state) {
+function TeamController($scope, Auth, userTeam, $state, $$state, players, $filter) {
 
   var team = this
   team.user = {}
-  team.user.lineup = userTeam
+  team.lineup = userTeam.data
+  team.qb = {}
+  team.rb = {}
+  team.wr = {}
+  team.te = {}
+  team.players = players.data
+ 
+
 
   team.authorize = function() {
-
-  if (Auth.currentUser().$$state.status > 0) {
+    
+  if (Auth.currentUser().$$state.status === 1) {
     
     team.user = Auth.currentUser().$$state.value
 
@@ -19,10 +26,17 @@ function TeamController($scope, Auth, userTeam, $state, $$state) {
   }
 }
 
-
+  team.searchFilter = function(position) {
+   var filtered =  $filter('filter')(team.players, position.toUpperCase())
+    var searchedPlayer = $filter('filter')(filtered, team[position])
+    team[position] = searchedPlayer[0]
+    team[position]['img_url'] = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+searchedPlayer[0].esbid+'.png'
+    debugger
+    
+  }
 
    
-  
+
   
 
   team.authorize()

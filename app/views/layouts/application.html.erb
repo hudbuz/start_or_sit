@@ -10,17 +10,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<h1>Sit or Start</h1>
   <div ng-app="app">
   
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+ 
 
-Welcome to Sit or Start
+
 
 <br>
 <%= yield %>
 </div>
-
+ <% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+    <ul>
+      <li>
+        <%= value %>
+      </li>
+    </ul>
+  </div>
+<% end %>
 
 </body>
 </html>

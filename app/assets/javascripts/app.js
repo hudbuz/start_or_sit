@@ -34,8 +34,13 @@ angular
       controller: 'TeamController as team', 
       resolve: {
         userTeam: function(TeamService, $http){
-          return TeamService.getTeam
+    
+          return TeamService.getTeam()
+        },
+        players: function(PlayerService, $http){
+          return PlayerService.getPlayers()
         }
+
 
       }
     })
