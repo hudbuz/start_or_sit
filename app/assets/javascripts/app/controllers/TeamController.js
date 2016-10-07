@@ -1,6 +1,6 @@
 (function() {
   
-function TeamController($scope, Auth, userTeam, $state, $$state, players, $filter, TeamService) {
+function TeamController($scope, Auth, userTeam, $state, $$state, players, $filter, TeamService, indexTable) {
 
   var team = this
   team.user = {}
@@ -10,11 +10,12 @@ function TeamController($scope, Auth, userTeam, $state, $$state, players, $filte
   team.wr = {}
   team.te = {}
   team.players = players.data
+  team.statTable = indexTable.data
  
 
 
   team.authorize = function() {
-    
+    debugger
   if (Auth.currentUser().$$state.status === 1) {
     
     team.user = Auth.currentUser().$$state.value

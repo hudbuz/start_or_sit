@@ -13,7 +13,7 @@ angular
         controller: 'authCtrl',
         onEnter: ['$state', 'Auth', function($state, Auth) {
           Auth.currentUser().then(function (){
-            $state.go('home.team');
+            $state.go('team');
           })
         }]
       })
@@ -23,13 +23,13 @@ angular
         controller: 'authCtrl',
         onEnter: ['$state', 'Auth', function($state, Auth) {
           Auth.currentUser().then(function (){
-            $state.go('home.team');
+            $state.go('team');
           })
         }]
 })
 
-    .state('home.team', {
-      url: 'team', 
+    .state('team', {
+      url: '/team', 
       templateUrl: 'team/team.html', 
       controller: 'TeamController as team', 
       resolve: {
@@ -39,79 +39,57 @@ angular
         },
         players: function(PlayerService, $http){
           return PlayerService.getPlayers()
-        }
+        }, 
+        indexTable: function(IndexService, $http) {
+        return IndexService.getIndices()
+      }
 
 
       }
     })
-    .state('home.qb', {
-      url: 'qb', 
+    .state('team.qb', {
+      url: '/qb', 
       templateUrl: 'players/qb.html', 
       controller: 'PlayerController as player',
       resolve: {
-        players: function(PlayerService, $http){
-         
-          return PlayerService.getPlayers()
-          
-
-      },
-      indexTable: function(IndexService, $http) {
-        return IndexService.getIndices()
-      },  
+        
+       
       position: function() {
         return "QB"
       }
     }
     })
-    .state('home.rb', {
-      url: 'rb', 
+    .state('team.rb', {
+      url: '/rb', 
       templateUrl: 'players/rb.html',
       controller: 'PlayerController as player',
       resolve: {
-        players: function(PlayerService, $http){
-          
-          return PlayerService.getPlayers()
-          
-      },
-      indexTable: function(IndexService, $http) {
-        return IndexService.getIndices()
-      },   
+        
+      
       position: function() {
         return "RB"
       }
     }
     })
-    .state('home.wr', {
-      url: 'wr', 
+    .state('team.wr', {
+      url: '/wr', 
       templateUrl: 'players/wr.html',
       controller: 'PlayerController as player',
       resolve: {
-        players: function(PlayerService, $http){
-          
-          return PlayerService.getPlayers()
-          
-      },
-      indexTable: function(IndexService, $http) {
-        return IndexService.getIndices()
-      },   
+        
+       
       position: function() {
         return "WR"
       }
     }
     })
-    .state('home.te', {
-      url: 'te', 
+    .state('team.te', {
+      url: '/te', 
       templateUrl: 'players/te.html',
       controller: 'PlayerController as player',
       resolve: {
-        players: function(PlayerService, $http){
-          
-          return PlayerService.getPlayers()
-          
-      },
-      indexTable: function(IndexService, $http) {
-        return IndexService.getIndices()
-      },   
+        
+       
       position: function() {
         return "TE"
       }

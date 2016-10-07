@@ -1,20 +1,21 @@
 (function(){
   
-function PlayerController(players, $filter, position, PlayerService, indexTable) {
+function PlayerController($scope, $filter, position, PlayerService) {
 
-   
+ 
    
     var player = this
-    player.data = players.data
+    player.data = $scope.$parent.team.players
     player.current_week = 5
 
     player.left = ""
-    player.left.stock = ""
+    player.stock = ""
     player.right = ""
+    player.rstock = ""
     player.searchedList = []
     player.stats = []
 
-    player.statTable = indexTable.data
+    player.statTable = $scope.$parent.team.statTable
   
 
     player.filteredList = $filter('filter')(player.data, position)
@@ -63,7 +64,22 @@ function PlayerController(players, $filter, position, PlayerService, indexTable)
         player.stats = namedStats
      }
     
+     // player.setDefault = function() {
+      
+     //  if ($scope.$parent.team.lineup.players.length > 0) {
+     //        debugger
+     //    for (i = 0; i < $scope.$parent.team.lineup.players.length; i ++ ){
+     //      if ($scope.$parent.team.lineup.players[i].position === position){
+     //        debugger
+     //        player.left = $scope.$parent.team.lineup.players[i]
+     //        player.searchFilter()
+     //        player.lstock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+$scope.$parent.team.players.length[i].esbid+'.png'
+     //      }
+     //    }
+     //  }
+     // }
 
+     // player.setDefault()
 
 }
 
