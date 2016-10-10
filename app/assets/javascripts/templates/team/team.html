@@ -23,4 +23,8 @@ Welcome {{team.user.username}}
   </tform>
 
 </div>
+
+<div ng-if="team.lineup.players.length > 1">
+
+  <teambar></teambar>
 <ui-view></ui-view>

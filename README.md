@@ -32,11 +32,10 @@ Things you may want to cover:
 
 
 
-new team 
-team model set up
 
-team api
+
+
+team navbar
+team display
 get team data to load player.left
-
-
 start comparison algo
