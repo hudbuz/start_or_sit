@@ -1,0 +1,31 @@
+{:uriI"Œfile://app/assets/javascripts/templates/team/team.html?type=text/ng-html&id=4a3c833f0261f1e9dcfebf64eddeb7ca75be98d328ef9731619bc1362318b240:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/templates/team/team.html;T:	nameI"templates/team/team;T:logical_pathI"templates/team/team.html;T:content_typeI"text/ng-html;T:sourceI"
+
+
+Welcome {{team.user.username}}
+
+
+
+
+<div class="nav">
+<a ui-sref="home">Home</a>
+
+ <a href="/" ui-sref="team">Team</a>
+
+</div>
+<div ng-if="team.lineup.length < 1">
+
+  <tform>
+
+  </tform>
+
+</div>
+
+<div ng-if="team.lineup.length > 1">
+
+  <teambar></teambar>
+</div>
+<ui-view></ui-view>;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Bfile-digest://app/assets/javascripts/templates/team/team.html;TT:charsetI"
+utf-8;F:digest"%înKÇL@+2£ŠºÉ‡^lñ«gF}‚?YÚu1?:lengthi:dependencies_digest"%ìÍõ^«¯hxöÒèO?óÂMéË¥fùe\:idI"E4a3c833f0261f1e9dcfebf64eddeb7ca75be98d328ef9731619bc1362318b240;F:
+mtimel+,ôüW

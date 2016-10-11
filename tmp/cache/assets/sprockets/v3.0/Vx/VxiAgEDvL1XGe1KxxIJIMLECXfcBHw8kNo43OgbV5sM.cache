@@ -1,27 +1,0 @@
-{:uriI"Œfile://app/assets/javascripts/templates/team/team.html?type=text/ng-html&id=7727a68b01925319a8e9668411854e55b2eba3a67c79c45d1b525bf710e65937:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/templates/team/team.html;T:	nameI"templates/team/team;T:logical_pathI"templates/team/team.html;T:content_typeI"text/ng-html;T:sourceI"A{{team.user}}
-
-
-Welcome {{team.user.username}}
-
-{{team.lineup}}
-
-
-<h3>Select Your Team</h3>
-<table style='50%'>
-
-<tr>
-<th> Your Team </th>
-<th> Edit Team</th>
-
-</tr>
-<tr id="qb"><td>Wentz</td> <td><i</td></tr>
-<tr id="rb"><td>Sproles</td>></tr>
-<tr id="wr"><td>Matthews</td></tr>
-<tr id="te"><td>Ertz</td></tr>
-
-
-</table>;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Bfile-digest://app/assets/javascripts/templates/team/team.html;TT:charsetI"
-utf-8;F:digest"%BŞ›T¸"-¨÷Ämè¡/ÅçŞ>ÀqÔ±ûÚ>TÍç:lengthiA:dependencies_digest"%¼«ÛQ“ÁÉ¬‰n(À-Ğ8OBM@d¯x‹1æéÉó“t:idI"E7727a68b01925319a8e9668411854e55b2eba3a67c79c45d1b525bf710e65937;F:
-mtimel+şwöW

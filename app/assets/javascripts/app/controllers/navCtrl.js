@@ -1,5 +1,5 @@
 
-function navCtrl($scope, Auth){
+function navCtrl($scope, Auth, $state){
 
     $scope.signedIn = Auth.isAuthenticated;
     $scope.logout = Auth.logout;
@@ -19,7 +19,9 @@ function navCtrl($scope, Auth){
     });
 
     $scope.$on('devise:logout', function (e, user){
-        $scope.user = {};
+
+        $scope.user = {}
+        $state.go('home')
     });
 }
 

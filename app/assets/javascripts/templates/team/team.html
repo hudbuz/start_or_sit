@@ -1,22 +1,16 @@
-{{team.user}}
+
 
 
 Welcome {{team.user.username}}
 
-{{team.lineup}}
+
 
 
 <div class="nav">
-<a ui-sref="home">Home</a>
+  <div ng-include="'nav/_nav.html'"></div>
 
- <a href="/" ui-sref="team">Team</a>
- <a ui-sref="team.qb">Quarterback</a>
- <a ui-sref="team.rb">Running Back</a>
- <a ui-sref="team.wr">Wide Receiver</a>
- <a ui-sref="team.te">Tight End</a>
- 
 </div>
-<div ng-if="team.lineup.players.length < 1">
+<div ng-if="team.lineup.length < 1">
 
   <tform>
 
@@ -24,7 +18,8 @@ Welcome {{team.user.username}}
 
 </div>
 
-<div ng-if="team.lineup.players.length > 1">
+<div ng-if="team.lineup.length > 1">
 
   <teambar></teambar>
+</div>
 <ui-view></ui-view>

@@ -3,15 +3,19 @@
   <tr id="teambar">
 
 
-hsdhdhshdh
-<td ng-repeat="player in team.lineup.players">
-{{player.esbid}}
+
+<td ng-repeat="player in team.lineup">
+
+
   <img ng-src="http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/{{player.esbid}}.png"></img></td>
+</tr>
+<tr>
+  <td> <a ui-sref="team.qb">Quarterback</a></td>
+ <td><a ui-sref="team.rb">Running Back</a></td>
+ <td><a ui-sref="team.wr">Wide Receiver</a></td>
+ <td><a ui-sref="team.te">Tight End</a></td>
 
-
-
-
-
+</tr>
 
 
 

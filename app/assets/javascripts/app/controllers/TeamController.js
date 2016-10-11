@@ -1,10 +1,24 @@
 (function() {
   
-function TeamController($scope, Auth, userTeam, $state, $$state, players, $filter, TeamService, indexTable) {
+function TeamController($scope, Auth, $state, $$state, players, $filter, TeamService, indexTable) {
 
   var team = this
-  team.user = {}
-  team.lineup = userTeam.data
+
+
+
+
+  TeamService.getTeam().then(function(data){
+    if (data.status !== 200) {
+      $state.go('login')
+
+    }
+    else {
+      team.user = Auth.currentUser().$$state.value
+      team.lineup = data.data.players
+    }
+
+  })
+  
   team.qb = {}
   team.rb = {}
   team.wr = {}
@@ -15,7 +29,7 @@ function TeamController($scope, Auth, userTeam, $state, $$state, players, $filte
 
 
   team.authorize = function() {
-    debugger
+    
   if (Auth.currentUser().$$state.status === 1) {
     
     team.user = Auth.currentUser().$$state.value
@@ -46,7 +60,6 @@ function TeamController($scope, Auth, userTeam, $state, $$state, players, $filte
 
   
 
-  team.authorize()
 
 }
 
