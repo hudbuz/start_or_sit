@@ -6,10 +6,17 @@ function PlayerController($scope, $filter, position, PlayerService) {
    
     var player = this
     player.data = $scope.$parent.team.players
-    player.current_week = 5
+    player.current_week = 6
 
     player.left = ""
     player.stock = ""
+    // for (i = 0; i < $scope.$parent.team.lineup) {
+    //     if ($scope.$parent.team.lineup[i].position === position){
+    //         player.left = $scope.$parent.team.lineup[i]
+    //         player.stock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+$scope.$parent.lineup[i].esbid+'.png'
+    //     }
+    // }
+  
     player.right = ""
     player.rstock = ""
     player.searchedList = []
@@ -23,11 +30,11 @@ function PlayerController($scope, $filter, position, PlayerService) {
 
     player.searchFilter = function() {
      
-      search = $filter('filter')(player.filteredList, player.left)
+      search = $filter('filter')(player.filteredList, player.right)
       PlayerService.getPlayer(search[0].player_id).then(function(resp){
        
         player.searchedList = resp.data.players[0]
-        player.stock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player.searchedList.esbid+'.png'
+        player.rstock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player.searchedList.esbid+'.png'
         player.listStats()
 
       })
