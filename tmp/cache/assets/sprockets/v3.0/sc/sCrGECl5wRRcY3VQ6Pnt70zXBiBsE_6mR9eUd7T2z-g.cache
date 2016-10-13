@@ -1,0 +1,30 @@
+{:uriI"file://app/assets/javascripts/templates/stats/stats.html?type=text/ng-html&id=9286fede744ecd253888329bda61302dd8c02ebe4ac9c4eb7dca502b60a507cd:ET:load_pathI"app/assets/javascripts;T:filenameI"6app/assets/javascripts/templates/stats/stats.html;T:	nameI"templates/stats/stats;T:logical_pathI"templates/stats/stats.html;T:content_typeI"text/ng-html;T:sourceI"Ô
+
+
+<div ng-if="player.right !== ''"><br>
+  <img src='{{player.rstock}}'>
+  <h3 id="playerName">{{player.searchedList.name}}, {{player.searchedList.position}} - {{player.searchedList.teamAbbr}}</h3>
+
+
+<div class="stats">
+
+Week {{player.current_week}}<br>
+This Week's Matchup: {{player.searchedList.weeks[player.current_week-1].opponent}}
+
+{{this.side}}
+<h4>Stats</h4>
+<div ng-repeat="(name,stat) in player.stats">
+  <li>{{name}}: {{stat}}</li>
+</div>
+</div>
+</div>
+
+
+
+
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Dfile-digest://app/assets/javascripts/templates/stats/stats.html;TT:charsetI"
+utf-8;F:digest"%øcgNÊÂ.³3¦vi7õÍ~ÅĞ‹*¡™ŞÿªøÎ8:lengthiÔ:dependencies_digest"%h”æÑåMOÀØÓâ'L~ü <‡M¦
+ÇcBíOy:idI"E9286fede744ecd253888329bda61302dd8c02ebe4ac9c4eb7dca502b60a507cd;F:
+mtimel+òRıW

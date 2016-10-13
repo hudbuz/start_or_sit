@@ -1,27 +1,0 @@
-{:uriI"file://app/assets/javascripts/templates/players/te.html?type=text/ng-html&id=bd7f355c52c34ba624606bdcbbd9a73de3d0851deb3a4c7040153c35512e23a7:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/te.html;T:	nameI"templates/players/te;T:logical_pathI"templates/players/te.html;T:content_typeI"text/ng-html;T:sourceI"_<div class="player_matchup">
-
-
-  <h2>Tight Ends</h2>
-
-
-   Your starter<input ng-model="player.left" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
-
-
-
-  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
-
-
-
-
-<br><br><br>
-
-<stats></stats>
-
-
-
-
-  </div>;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/te.html;TT:charsetI"
-utf-8;F:digest"%L'ĞÜ±™,¼5·>à²%ñ?)¡ÚÊ¤‹àSÒÀ”!:lengthi_:dependencies_digest"%Á(‡×ì-‰ğ;Ì¦Ÿ's"¿Î·tü˜øOx]¯²[:idI"Ebd7f355c52c34ba624606bdcbbd9a73de3d0851deb3a4c7040153c35512e23a7;F:
-mtimel+ {õW

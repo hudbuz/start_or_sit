@@ -1,34 +1,0 @@
-{:uriI"file://app/assets/javascripts/templates/players/qb.html?type=text/ng-html&id=5f1edf64f7bf0b126b0ce570a13d5dfe8c273a2ed31bf4468736705e80b7f584:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/qb.html;T:	nameI"templates/players/qb;T:logical_pathI"templates/players/qb.html;T:content_typeI"text/ng-html;T:sourceI"è<div class="player_matchup">
-
-
-  <h2>Quarterback</h2>
-
-
-
-  Your starter<input ng-model="player.left" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
-
-
-
-  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
-
-
-
-
-<br><br><br>
-
-<!-- 
-{{player.searchedList.name}}
-{{player.searchedList.teamAbbr}}
-{{player.searchedList.player_id}}
-<img src='{{player.stock}}'>
- -->
-<stats></stats>
-
-
-
-
-  </div>;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/qb.html;TT:charsetI"
-utf-8;F:digest"%hÍ~Ozc	Y…·‡ç°9¸Â÷}T-Å‹„‹„:lengthiè:dependencies_digest"%¸Bl^¹vçÛgìâ÷	X’şZô0‡díí¼CA’²YÙ_:idI"E5f1edf64f7bf0b126b0ce570a13d5dfe8c273a2ed31bf4468736705e80b7f584;F:
-mtimel+!õW

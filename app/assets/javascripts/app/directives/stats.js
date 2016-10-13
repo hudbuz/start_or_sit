@@ -1,11 +1,10 @@
 function stats() {
   return {
-  templateUrl: 'stats/stats.html',
-  bindings: {
-    label: '='
-  }
+  templateUrl: 'stats/stats.html'
+
 
 }
+debugger
 }
 
 angular

@@ -4,3 +4,8 @@ img {
 
 }
 
+div .profile {
+  float: left;
+  padding-right: 30px
+}
+

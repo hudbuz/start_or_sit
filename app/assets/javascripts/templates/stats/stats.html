@@ -1,19 +1,82 @@
-<div ng-if="this.label === right">
-<div ng-if="player.right !== ''"><br>
-  <img src='{{player.rstock}}'>
-  <h3 id="playerName">{{player.searchedList.name}}, {{player.searchedList.position}} - {{player.searchedList.teamAbbr}}</h3>
+
+<div class="profile" id="left" active="false">
+
+<img src='{{player.stock}}'>
+<h3 id="playerTitle">
+{{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
+<ul>
+<h4>Stats</h4>
+<li>Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
+<li>Week Points: {{player.left.week_points}} </li>
+<li>Season Points: {{player.left.season_points}} </li>
+<li>Season Projected Points: {{player.left.season_projected_points}} </li>
+
+</ul>
+
+<div class="morestats">
 
 
-<div class="stats">
-
-Week {{player.current_week}}<br>
-This Week's Matchup: {{player.searchedList.weeks[player.current_week-1].opponent}}
+<div ng-click="player.listStats('left')">Show More </div>
 
 
 <h4>Stats</h4>
-<div ng-repeat="(name,stat) in player.stats">
+<div ng-if="player.clicked = true">
+<div ng-repeat="(name,stat) in player.left.stats">
   <li>{{name}}: {{stat}}</li>
+
+</div>
+<button ng-click="player.clicked = false">Hide</button>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<div class="profile" id="sosButton">
+
+ <button ng-click="player.start_or_sit()">Start or Sit</button>
+
+</div>
+
+
+<div class="profile" id="right" active="false">
+
+
+<div ng-if="player.right !== ''"><br>
+  <img src='{{player.rstock}}'>
+  <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.teamAbbr}}</h3>
+<ul>
+<h4>Stats</h4>
+<li>Week {{player.current_week}}: Projected Points: {{player.right.week_projected_points}} </li>
+<li>Week Points: {{player.right.week_points}} </li>
+<li>Season Points: {{player.right.season_points}} </li>
+<li>Season Projected Points: {{player.right.season_projected_points}} </li>
+
+</ul>
+
+<div class="morestats">
+
+
+<div ng-click="player.listStats('right')">Show More </div>
+
+
+<h4>Stats</h4>
+<div ng-if="player.clicked = true">
+<div ng-repeat="(name,stat) in player.right.stats">
+  <li>{{name}}: {{stat}}</li>
+
+</div>
+<button ng-click="player.clicked = false">Hide</button>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
+
+
 </div>

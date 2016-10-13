@@ -18,6 +18,13 @@ class PlayerDataController < ApplicationController
 
   end
 
+  def update_stats
+    @resp = Faraday.get 'http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2016&format=json'
+    playerData = JSON.parse(@resp.body)
+    Player.update_stats(playerData['players'])
+
+  end
+
 
 
 

@@ -1,34 +1,0 @@
-{:uriI"Œfile://app/assets/javascripts/templates/team/team.html?type=text/ng-html&id=5a509cf5b79e9679066dee72e7c25d319989fdd0d9133fc16dda783ef94a16fd:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/templates/team/team.html;T:	nameI"templates/team/team;T:logical_pathI"templates/team/team.html;T:content_typeI"text/ng-html;T:sourceI"Û{{team.user}}
-
-
-Welcome {{team.user.username}}
-
-{{team.lineup}}
-
-
-<div class="nav">
-<a ui-sref="home">Home</a>
-
- <a href="/" ui-sref="team">Team</a>
- <a ui-sref="team.qb">Quarterback</a>
- <a ui-sref="team.rb">Running Back</a>
- <a ui-sref="team.wr">Wide Receiver</a>
- <a ui-sref="team.te">Tight End</a>
- 
-</div>
-<div ng-if="team.lineup.players.length < 1">
-
-  <tform>
-
-  </tform>
-
-</div>
-
-<div ng-if="team.lineup.players.length > 1">
-
-  <teambar></teambar>
-<ui-view></ui-view>;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Bfile-digest://app/assets/javascripts/templates/team/team.html;TT:charsetI"
-utf-8;F:digest"%£cà3`©Ï[ Ppçúüøî) ğ‡·j•æ{¡Š}×¹:lengthiÛ:dependencies_digest"%0üw,À¶NayÌjrâÃÜ.•g?P²ó7ş+;ú:idI"E5a509cf5b79e9679066dee72e7c25d319989fdd0d9133fc16dda783ef94a16fd;F:
-mtimel+ÑRüW
