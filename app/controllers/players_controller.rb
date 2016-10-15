@@ -11,9 +11,21 @@ class PlayersController < ApplicationController
 
 
   def show
-    @player = Player.find(params[:id])
+
+
+    if params[:id].to_i == 0
+
+      @rank = Player.get_D_rank(params[:id])
+   
+      render json: @rank
+    else
+      @player = Player.find(params[:id])  
+      render json: @player
+    end
 
   end
+
+
 
 
 

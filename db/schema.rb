@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012135449) do
+ActiveRecord::Schema.define(version: 20161014213038) do
 
   create_table "indices", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20161012135449) do
     t.integer  "season_projected_points"
     t.integer  "week_projected_points"
     t.integer  "week_points"
+    t.string   "opponent"
   end
 
   create_table "team_players", force: :cascade do |t|

@@ -1,8 +1,10 @@
 class Player < ApplicationRecord
+
+
   has_many :team_players
   has_many :teams, through: :team_players
 
-
+  @@current_week = 6
 
   def self.download(playerdata)
     binding.pry
@@ -18,6 +20,7 @@ class Player < ApplicationRecord
  end
 
  def self.update_stats(playerdata)
+  binding.pry
   playerdata.each do |player|
     p = self.find_by(name: player['name'])
     if p != nil
@@ -29,4 +32,22 @@ class Player < ApplicationRecord
     end
   end
  end
+
+
+ def self.get_D_rank(name)
+  players = Player.where(position: 'DEF').order('season_points DESC')
+  rank = 0
+
+  players.each_with_index do |team, index|
+   
+    if team.team_name == name
+  
+      rank = index + 1
+    end
+
+ end
+ rank
+end
+
+
 end

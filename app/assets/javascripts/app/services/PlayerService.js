@@ -21,6 +21,11 @@
 
     }
 
+    this.getRank = function(id) {
+
+      return $http.get('http://localhost:3000/players/'+id)
+    }
+
 
 
   }

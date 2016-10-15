@@ -19,13 +19,17 @@
 <div ng-click="player.listStats('left')">Show More </div>
 
 
+<div ng-if="player.left['clicked'] === true">
+
+  <h5>Matchup: {{player.left['opponent']['name'] }}</h5>
+<h5>Defense Rank: {{player.left['opponent']['rank']}}</h5>
+
 <h4>Stats</h4>
-<div ng-if="player.clicked = true">
 <div ng-repeat="(name,stat) in player.left.stats">
   <li>{{name}}: {{stat}}</li>
 
 </div>
-<button ng-click="player.clicked = false">Hide</button>
+<button ng-click="player.left['clicked'] = false">Hide</button>
 </div>
 
 </div>
@@ -63,13 +67,21 @@
 <div ng-click="player.listStats('right')">Show More </div>
 
 
+
+
+
+<div ng-if="player.right['clicked'] === true">
+
+
+<h5>Matchup: {{player.right['opponent']['name'] }}</h5>
+<h5>Defense Rank: {{player.right['opponent']['rank']}}</h5>
+
 <h4>Stats</h4>
-<div ng-if="player.clicked = true">
 <div ng-repeat="(name,stat) in player.right.stats">
   <li>{{name}}: {{stat}}</li>
 
 </div>
-<button ng-click="player.clicked = false">Hide</button>
+<button ng-click="player.right['clicked'] = false">Hide</button>
 </div>
 
 </div>

@@ -18,14 +18,15 @@ function PlayerController($scope, $filter, position, PlayerService) {
              player.stock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player.left.esbid+'.png'
          }
      }
-     debugger
+  
     
   
     player.right = ""
     player.rstock = ""
     
     
-    player.checked = false
+    player.left['clicked'] = false
+    player.right['clicked'] = false
 
     player.statTable = $scope.$parent.team.statTable
   
@@ -34,7 +35,7 @@ function PlayerController($scope, $filter, position, PlayerService) {
 
 
     player.searchFilter = function($event) {
-     
+  
       var search = $filter('filter')(player.filteredList, player.right)[0]
      
       player.right = search
@@ -50,9 +51,9 @@ function PlayerController($scope, $filter, position, PlayerService) {
     }
 
     player.listStats = function(side) {
-        
+          
       var stats = {}
-        debugger
+        
       PlayerService.getPlayer(player[side].player_id).then(function(resp){
         fullStats = resp.data.players[0]
         for (i = 0; i < fullStats.weeks.length; i++ ) {
@@ -83,10 +84,15 @@ function PlayerController($scope, $filter, position, PlayerService) {
         }
 
         player[side]['stats'] = namedStats
-        
-        player.checked = true
-
+        player[side]['opponent'] = {}
+        player[side]['opponent']['name'] = fullStats['weeks'][player.current_week-1].opponent
+        PlayerService.getRank(player[side]['opponent']['name']).then(function(resp) {
+            player[side]['opponent']['rank'] = resp.data
+        })
+        player[side]['clicked'] = true
         debugger
+
+        
     })
      }
 
@@ -95,20 +101,29 @@ function PlayerController($scope, $filter, position, PlayerService) {
 
         var left = player.left
         var right = player.right
-        debugger
+        
         if (left.stats === undefined) {
             player.listStats('left')
         }
         if (right.stats === undefined) {
             player.listStats('right')
         }
-
-        if (left.week_projected_points > right.week_projected_points) {
+        debugger
+        var lscore = 0
+        var rscore = 0
+        if (lscore > rscore) {
             $('#left').css({
-        'background-color': 'green'
+        'background-color': '#90EE90'
       
-    });
+               });
         }
+            else{
+                $('#right').css({
+        'background-color': '#90EE90'
+       
+    });
+            }
+        
 
      }
     

@@ -1,0 +1,89 @@
+{:uriI"file://app/assets/javascripts/templates/stats/stats.html?type=text/ng-html&id=da1dc2f295ddecb4bf88e8f3608901a86aea25a72731725153c1f01f3c587f0c:ET:load_pathI"app/assets/javascripts;T:filenameI"6app/assets/javascripts/templates/stats/stats.html;T:	nameI"templates/stats/stats;T:logical_pathI"templates/stats/stats.html;T:content_typeI"text/ng-html;T:sourceI"ƒ
+<div class="profile" id="left" active="false">
+
+<img src='{{player.stock}}'>
+<h3 id="playerTitle">
+{{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
+<ul>
+<h4>Stats</h4>
+<li>Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
+<li>Week Points: {{player.left.week_points}} </li>
+<li>Season Points: {{player.left.season_points}} </li>
+<li>Season Projected Points: {{player.left.season_projected_points}} </li>
+
+</ul>
+
+<div class="morestats">
+
+
+<div ng-click="player.listStats('left')">Show More </div>
+
+<h5>Matchup: {{player.left['opponent'['name']]}}</h5>
+<h5>Defense Rank: {{player.left['opponent'['rank']]}}</h5>
+
+<h4>Stats</h4>
+<div ng-if="player.clicked = true">
+<div ng-repeat="(name,stat) in player.left.stats">
+  <li>{{name}}: {{stat}}</li>
+
+</div>
+<button ng-click="player.clicked = false">Hide</button>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<div class="profile" id="sosButton">
+
+ <button ng-click="player.start_or_sit()">Start or Sit</button>
+
+</div>
+
+
+<div class="profile" id="right" active="false">
+
+
+<div ng-if="player.right !== ''"><br>
+  <img src='{{player.rstock}}'>
+  <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.teamAbbr}}</h3>
+<ul>
+<h4>Stats</h4>
+<li>Week {{player.current_week}}: Projected Points: {{player.right.week_projected_points}} </li>
+<li>Week Points: {{player.right.week_points}} </li>
+<li>Season Points: {{player.right.season_points}} </li>
+<li>Season Projected Points: {{player.right.season_projected_points}} </li>
+
+</ul>
+
+<div class="morestats">
+
+
+<div ng-click="player.listStats('right')">Show More </div>
+
+<h5>Matchup: {{player.right['opponent']}}</h5>
+<h4>Stats</h4>
+<div ng-if="player.clicked = true">
+<div ng-repeat="(name,stat) in player.right.stats">
+  <li>{{name}}: {{stat}}</li>
+
+</div>
+<button ng-click="player.clicked = false">Hide</button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Dfile-digest://app/assets/javascripts/templates/stats/stats.html;TT:charsetI"
+utf-8;F:digest"%yÈ_{tØ™í®se¡¨Ô¨í°u¯[ÀbNıc’:lengthiƒ:dependencies_digest"%Û@8›”çâL¿DÑòn­üLP=a|ß—+R÷¦üÄ|-:idI"Eda1dc2f295ddecb4bf88e8f3608901a86aea25a72731725153c1f01f3c587f0c;F:
+mtimel+JmX

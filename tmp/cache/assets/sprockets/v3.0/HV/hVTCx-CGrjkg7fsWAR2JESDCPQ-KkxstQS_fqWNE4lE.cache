@@ -1,0 +1,30 @@
+{:uriI"file://app/assets/javascripts/templates/players/rb.html?type=text/ng-html&id=dbfcdaca571d01e6e3864b923192949a66e60eb484bed111a03989e262c0a0e3:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/rb.html;T:	nameI"templates/players/rb;T:logical_pathI"templates/players/rb.html;T:content_typeI"text/ng-html;T:sourceI"=<div class="player_matchup">
+
+
+  <h2>Running Backs</h2>
+
+
+  Your starter<br><input ng-model="player.left.name"></input>
+
+
+
+  Compared to: <input ng-model="player.right" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}">{{player.right.name}}</input>
+
+
+
+<br><br><br>
+
+
+
+
+<stats></stats>
+
+
+
+
+
+  </div>;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/rb.html;TT:charsetI"
+utf-8;F:digest"%aŞ@f¥ôŠÌ„_H÷. ñ(‰cÑÊØs‚!±6ı©:lengthi=:dependencies_digest"%ÿS–m*ô8üh¯ƒ’ÿStFy´Na’AğEŒĞb:idI"Edbfcdaca571d01e6e3864b923192949a66e60eb484bed111a03989e262c0a0e3;F:
+mtimel+EX
