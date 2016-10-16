@@ -118,7 +118,7 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
      }
 
      player.switchPlayer = function() {
-        debugger
+        
         TeamService.switchPlayer(Auth.currentUser().$$state.value.id, player.right).then(function(resp){
             debugger
             

@@ -24,11 +24,10 @@ class Team < ApplicationRecord
   def switch_player(data)
 
     binding.pry
-    old = TeamPlayer.where(team_id: self.id, player_id: self.players.where(position: data['position'])[0].id)
-    old.delete
     new_player = Player.find_by(name: data['name'])
-    TeamPlayer.create(player_id: new_player.id, team_id: self.id)
-    self.save
+    self.team_players.where(player_id: self.players.where(position: data['position'])[0].id).update(player_id: new_player.id)
+
+  
 
   end
 end

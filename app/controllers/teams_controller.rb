@@ -20,7 +20,7 @@ class TeamsController < ApplicationController
   end
 
   def update
-    binding.pry
+
     if params['lineup']
     @team = Team.find(params['lineup']['id'])
     @team.update_team(params)
@@ -28,6 +28,7 @@ class TeamsController < ApplicationController
     else 
       @team = Team.find_by(user_id: params[:id])
       @team.switch_player(params)
+      binding.pry
       render json: @team
 
    end
