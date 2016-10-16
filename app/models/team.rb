@@ -17,13 +17,13 @@ class Team < ApplicationRecord
     TeamPlayer.create(player_id: @te.id, team_id: self.id)
 
     self.save
-    binding.pry
+    
   end
 
 
   def switch_player(data)
 
-    binding.pry
+   
     new_player = Player.find_by(name: data['name'])
     self.team_players.where(player_id: self.players.where(position: data['position'])[0].id).update(player_id: new_player.id)
 

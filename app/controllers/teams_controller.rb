@@ -28,7 +28,7 @@ class TeamsController < ApplicationController
     else 
       @team = Team.find_by(user_id: params[:id])
       @team.switch_player(params)
-      binding.pry
+     
       render json: @team
 
    end

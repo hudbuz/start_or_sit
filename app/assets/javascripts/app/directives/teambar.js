@@ -1,7 +1,12 @@
-function teambar() {
+function teambar($rootScope) {
 
 return {
-  templateUrl: 'team/teambar.html'
+  templateUrl: 'team/teambar.html',
+  link: function($rootscope) {
+    $rootscope.on('newLineup', function(event, data){
+      debugger
+    })
+  }
 
 
 

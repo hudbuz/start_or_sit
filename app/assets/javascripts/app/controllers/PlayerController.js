@@ -1,6 +1,6 @@
 (function(){
   
-function PlayerController($scope, $filter, position, PlayerService, $timeout, TeamService, Auth) {
+function PlayerController($scope, $filter, position, PlayerService, $timeout, TeamService, Auth, $rootScope) {
 
  
    
@@ -121,6 +121,7 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
         
         TeamService.switchPlayer(Auth.currentUser().$$state.value.id, player.right).then(function(resp){
             debugger
+            $rootScope.$emit('changeLineup', resp);
             
         })
 

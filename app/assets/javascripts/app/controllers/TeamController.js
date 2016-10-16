@@ -1,6 +1,6 @@
 (function() {
   
-function TeamController($scope, Auth, $state, $$state, players, $filter, TeamService, indexTable) {
+function TeamController($scope, Auth, $state, $$state, players, $filter, TeamService, indexTable, $rootScope) {
 
   var team = this
 
@@ -55,6 +55,11 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
     debugger
     resp = TeamService.createTeam(team.lineup.id, team)
   }
+  $rootScope.$on('changeLineup', function (event, data) {
+    team.lineup = data.data.players
+       $rootScope.$broadcast('newLineup', data.data.players)
+        
+    });
 
    
 
