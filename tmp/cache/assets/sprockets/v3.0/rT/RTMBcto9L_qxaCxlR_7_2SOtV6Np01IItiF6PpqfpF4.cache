@@ -1,63 +1,0 @@
-{:uriI"Žfile://app/assets/javascripts/templates/stats/stats.html?type=text/ng-html&id=b53257d6f5d186921754028d8b157492f0cde240f3eb8c163195c5d7f1c6cf9f:ET:load_pathI"app/assets/javascripts;T:filenameI"6app/assets/javascripts/templates/stats/stats.html;T:	nameI"templates/stats/stats;T:logical_pathI"templates/stats/stats.html;T:content_typeI"text/ng-html;T:sourceI"F
-
-
-<div class="profile" id="left">
-
-<img src='{{player.stock}}'>
-<h3 id="playerTitle">
-{{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
-<ul>
-<h4>Stats</h4>
-<li>Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
-<li>Week Points: {{player.left.week_points}} </li>
-<li>Season Points: {{player.left.season_points}} </li>
-<li>Season Projected Points: {{player.left.season_projected_points}} </li>
-
-</ul>
-
-
-
-</div>
-
-
-
-<div class="profile" id="left">
-
-
-<div ng-if="player.right !== ''"><br>
-  <img src='{{player.rstock}}'>
-  <h3 id="playerTitle">{{player.searchedList.name}}, {{player.searchedList.position}} - {{player.searchedList.teamAbbr}}</h3>
-<ul>
-<h4>Stats</h4>
-<li>Week {{player.current_week}}: Projected Points: {{player.searchedList.week_projected_points}} </li>
-<li>Week Points: {{player.searchedList.week_points}} </li>
-<li>Season Points: {{player.searchedList.season_points}} </li>
-<li>Season Projected Points: {{player.searchedList.season_projected_points}} </li>
-
-</ul>
-
-<div class="morestats">
-
-
-<div ng-click="player.listStats()">Show More </div>
-
-
-<h4>Stats</h4>
-<div ng-if="player.clicked = true">
-<div ng-repeat="(name,stat) in player.stats">
-  <li>{{name}}: {{stat}}</li>
-   <div ng-click="player.clicked = false">Hide</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-
-</div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Dfile-digest://app/assets/javascripts/templates/stats/stats.html;TT:charsetI"
-utf-8;F:digest"%?œ@ˆ òØvà[_çékó¤¹¾VaêëÅWQÅE:lengthiF:dependencies_digest"%âØ˜ Å#ÿ#VXfW$qX¹mÑÙ7ä)«ËBžiàˆ:idI"Eb53257d6f5d186921754028d8b157492f0cde240f3eb8c163195c5d7f1c6cf9f;F:
-mtimel+$”ÿW

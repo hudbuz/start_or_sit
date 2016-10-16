@@ -15,6 +15,10 @@
         return $http.patch('http://localhost:3000/teams/'+id, data)
       }
 
+      this.switchPlayer = function(id, player) {
+        return $http.patch('http://localhost:3000/teams/'+id, player)
+      }
+
 
 
     }

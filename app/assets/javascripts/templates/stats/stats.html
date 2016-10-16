@@ -13,10 +13,12 @@
 
 </ul>
 
+<strong><div ng-if="player.compared">S.O.S. Value: {{player.left['sosScore']}}</div></strong>
+
 <div class="morestats">
 
 
-<div ng-click="player.listStats('left')">Show More </div>
+<div ng-click="player.left['clicked'] = true">Show More </div>
 
 
 <div ng-if="player.left['clicked'] === true">
@@ -43,7 +45,13 @@
 
  <button ng-click="player.start_or_sit()">Start or Sit</button>
 
+
 </div>
+
+<div class="profile" id="substitue" ng-if="player.substitute == true">
+<button ng-click="player.switchPlayer()">Start {{player.right.name}}</button>
+
+  </div>
 
 
 <div class="profile" id="right" active="false">
@@ -59,12 +67,16 @@
 <li>Season Points: {{player.right.season_points}} </li>
 <li>Season Projected Points: {{player.right.season_projected_points}} </li>
 
+
+
 </ul>
+
+<strong><div ng-if="player.compared">S.O.S. Value: {{player.right['sosScore']}}</div></strong>
 
 <div class="morestats">
 
 
-<div ng-click="player.listStats('right')">Show More </div>
+<div ng-click="player.right['clicked'] = true">Show More </div>
 
 
 

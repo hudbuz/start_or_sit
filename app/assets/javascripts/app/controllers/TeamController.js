@@ -58,7 +58,7 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
 
    
 
- 
+  
 
 
 }

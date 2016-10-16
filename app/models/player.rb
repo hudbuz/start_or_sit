@@ -35,13 +35,14 @@ class Player < ApplicationRecord
 
 
  def self.get_D_rank(name)
+  name = name.delete('@')
   players = Player.where(position: 'DEF').order('season_points DESC')
   rank = 0
 
   players.each_with_index do |team, index|
    
+
     if team.team_name == name
-  
       rank = index + 1
     end
 
