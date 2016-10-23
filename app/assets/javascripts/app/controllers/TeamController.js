@@ -57,7 +57,7 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
   }
   $rootScope.$on('changeLineup', function (event, data) {
     team.lineup = data.data.players
-       $rootScope.$broadcast('newLineup', data.data.players)
+      
         
     });
 

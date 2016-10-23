@@ -1,0 +1,112 @@
+{:uriI"Žfile://app/assets/javascripts/templates/stats/stats.html?type=text/ng-html&id=5724564ccbb4c639a934d3bf456d01d77c43032fca3a44841afb3e77c1be8860:ET:load_pathI"app/assets/javascripts;T:filenameI"6app/assets/javascripts/templates/stats/stats.html;T:	nameI"templates/stats/stats;T:logical_pathI"templates/stats/stats.html;T:content_typeI"text/ng-html;T:sourceI"À	
+<div class="profile" id="left" active="false">
+
+<img src='{{player.stock}}'>
+<h3 id="playerTitle">
+{{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
+<ul>
+<h4>Stats</h4>
+<li>Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
+<li>Week Points: {{player.left.week_points}} </li>
+<li>Season Points: {{player.left.season_points}} </li>
+<li>Season Projected Points: {{player.left.season_projected_points}} </li>
+
+</ul>
+
+<strong><div ng-if="player.compared">S.O.S. Value: {{player.left['sosScore']}}</div></strong>
+
+<div class="morestats">
+
+
+<div ng-click="player.left['clicked'] = true">Show More </div>
+
+
+<div ng-if="player.left['clicked'] === true">
+
+  <h5>Matchup: {{player.left['opponent']['name'] }}</h5>
+<h5>Defense Rank: {{player.left['opponent']['rank']}}</h5>
+
+<h4>Stats</h4>
+<div ng-repeat="(name,stat) in player.left.stats">
+  <li>{{name}}: {{stat}}</li>
+
+</div>
+<button ng-click="player.left['clicked'] = false">Hide</button>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<div class="profile" id="sosButton">
+
+ <button ng-click="player.start_or_sit()">Start or Sit</button>
+
+
+</div>
+
+<div class="profile" id="substitue" ng-if="player.substitute == true">
+<button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button>
+<button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
+
+  </div>
+
+
+<div class="profile" id="right" active="false">
+
+
+<div ng-if="player.right !== ''"><br>
+  <img src='{{player.rstock}}'>
+  <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.teamAbbr}}</h3>
+<ul>
+<h4>Stats</h4>
+<li>Week {{player.current_week}}: Projected Points: {{player.right.week_projected_points}} </li>
+<li>Week Points: {{player.right.week_points}} </li>
+<li>Season Points: {{player.right.season_points}} </li>
+<li>Season Projected Points: {{player.right.season_projected_points}} </li>
+
+
+
+</ul>
+
+<strong><div ng-if="player.compared">S.O.S. Value: {{player.right['sosScore']}}</div></strong>
+
+<div class="morestats">
+
+
+<div ng-click="player.right['clicked'] = true">Show More </div>
+
+
+
+
+
+<div ng-if="player.right['clicked'] === true">
+
+
+<h5>Matchup: {{player.right['opponent']['name'] }}</h5>
+<h5>Defense Rank: {{player.right['opponent']['rank']}}</h5>
+
+<h4>Stats</h4>
+<div ng-repeat="(name,stat) in player.right.stats">
+  <li>{{name}}: {{stat}}</li>
+
+</div>
+<button ng-click="player.right['clicked'] = false">Hide</button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Dfile-digest://app/assets/javascripts/templates/stats/stats.html;TT:charsetI"
+utf-8;F:digest"%þ}=½HõƒÌæU~Ú'wz„„s?ƒ”à7Q<8§:lengthiÀ	:dependencies_digest"%ñø³ßô^Ðå-ÞP«Z-R˜Š—†Æf4XçSü|È¿Æ˜:idI"E5724564ccbb4c639a934d3bf456d01d77c43032fca3a44841afb3e77c1be8860;F:
+mtimel+X

@@ -110,17 +110,18 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
         'background-color': '#90EE90'
        
     })
-              player.substitute = true
+              
             }
+            player.substitute = true
         player.compared = true
-        
+        debugger
 
      }
 
-     player.switchPlayer = function() {
+     player.switchPlayer = function(position) {
         
-        TeamService.switchPlayer(Auth.currentUser().$$state.value.id, player.right).then(function(resp){
-            debugger
+        TeamService.switchPlayer(Auth.currentUser().$$state.value.id, player[position]).then(function(resp){
+            
             $rootScope.$emit('changeLineup', resp);
             
         })

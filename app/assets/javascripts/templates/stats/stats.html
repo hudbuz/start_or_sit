@@ -49,7 +49,8 @@
 </div>
 
 <div class="profile" id="substitue" ng-if="player.substitute == true">
-<button ng-click="player.switchPlayer()">Start {{player.right.name}}</button>
+<button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button>
+<button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
 
   </div>
 
