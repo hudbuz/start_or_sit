@@ -1,5 +1,5 @@
 
-<div class="profile" id="left" active="false">
+<div class="profile" id="left">
 
 <img src='{{player.stock}}'>
 <h3 id="playerTitle">
@@ -36,10 +36,7 @@
 
 </div>
 
-
-
 </div>
-
 
 <div class="profile" id="sosButton">
 
@@ -53,11 +50,7 @@
 <button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
 
   </div>
-
-
-<div class="profile" id="right" active="false">
-
-
+<div class="profile" id="right">
 <div ng-if="player.right !== ''"><br>
   <img src='{{player.rstock}}'>
   <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.teamAbbr}}</h3>
@@ -67,32 +60,19 @@
 <li>Week Points: {{player.right.week_points}} </li>
 <li>Season Points: {{player.right.season_points}} </li>
 <li>Season Projected Points: {{player.right.season_projected_points}} </li>
-
-
-
 </ul>
-
 <strong><div ng-if="player.compared">S.O.S. Value: {{player.right['sosScore']}}</div></strong>
-
 <div class="morestats">
 
 
 <div ng-click="player.right['clicked'] = true">Show More </div>
-
-
-
-
-
 <div ng-if="player.right['clicked'] === true">
-
-
 <h5>Matchup: {{player.right['opponent']['name'] }}</h5>
 <h5>Defense Rank: {{player.right['opponent']['rank']}}</h5>
 
 <h4>Stats</h4>
 <div ng-repeat="(name,stat) in player.right.stats">
   <li>{{name}}: {{stat}}</li>
-
 </div>
 <button ng-click="player.right['clicked'] = false">Hide</button>
 </div>

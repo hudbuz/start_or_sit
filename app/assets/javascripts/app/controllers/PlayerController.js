@@ -1,6 +1,6 @@
 (function(){
   
-function PlayerController($scope, $filter, position, PlayerService, $timeout, TeamService, Auth, $rootScope) {
+function PlayerController($scope, $filter, position, PlayerService, $timeout, TeamService, Auth, $rootScope, $state) {
 
  
    
@@ -100,33 +100,47 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
         player.left['sosScore'] = lscore
         player.right['sosScore'] = rscore
         if (lscore > rscore) {
-            $('#left').css({
-        'background-color': '#90EE90'
-      
-               });
+            $('#left').addClass('active');
         }
             else{
-                $('#right').css({
-        'background-color': '#90EE90'
+                $('#right').addClass('active')
        
-    })
+    }
               
-            }
+            
             player.substitute = true
         player.compared = true
-        debugger
+        
 
      }
 
-     player.switchPlayer = function(position) {
+     player.switchPlayer = function(side) {
         
-        TeamService.switchPlayer(Auth.currentUser().$$state.value.id, player[position]).then(function(resp){
+        TeamService.switchPlayer(Auth.currentUser().$$state.value.id, player[side]).then(function(resp){
             
             $rootScope.$emit('changeLineup', resp);
+            for (i = 0; i < resp.data.players.length; i ++) {
+          
+              if (resp.data.players[i]['position'] === player.left.position){
+                player.left = resp.data.players[i]
+                player.stock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+resp.data.players[i]['esbid']+'.png'
+                player.reset()
+            }
+            }
             
         })
-
-
+        
+        
+     }
+     player.reset = function() {
+        player.right = ""
+        player.rstock = ""
+        player.left['clicked'] = false
+        player.right['clicked'] = false
+        player.comapred = false
+        player.substitute = false
+        $('#left').removeClass('active')
+        $('#right').removeClass('active')
      }
     
   
