@@ -10,7 +10,7 @@ function authCtrl($scope, $state, Auth){
 
     $scope.register = function() {
         Auth.register($scope.user).then(function(){
-            debugger
+           
             $state.go('team');
         });
     }

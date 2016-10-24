@@ -138,6 +138,7 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
                 player.left = resp.data.players[i]
                 player.stock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+resp.data.players[i]['esbid']+'.png'
                 player.reset()
+                player.listStats('left')
             }
             }
             
