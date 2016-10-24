@@ -21,10 +21,23 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
 
 
     player.searchFilter = function($event) {
-  
-      var search = $filter('filter')(player.filteredList, player.right)[0]
+      if (player.right.name === ''){
+        player.right = ""
+        player.rstock = ""
+        return null
+      }
+      if (player.right.player_id) {
+        var name = player.right.name
+        player.right = {}
+        player.rstock = ''
+        player.right['name'] = name 
      
+      }
+
+      var search = $filter('filter')(player.filteredList, player.right)[0]
+    
       player.right = search
+ 
 
       player.rstock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player.right.esbid+'.png'
       player.listStats('right')

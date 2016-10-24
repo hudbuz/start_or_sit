@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="header">
-<h1>Sit or Start</h1>
+<h1>Start or Sit</h1>
 
 </div>
   <div ng-app="app">
@@ -27,6 +27,7 @@
 <%= yield %>
 </div>
  <% flash.each do |key, value| %>
+ <% binding.pry %>
   <div class="alert alert-<%= key %>">
     <a href="#" data-dismiss="alert" class="close">×</a>
     <ul>
