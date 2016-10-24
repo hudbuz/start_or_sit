@@ -28,7 +28,7 @@ gem 'responders'
 gem 'angular-rails-templates', '~> 1.0'
 gem 'angular_rails_csrf', :git => 'git://github.com/AlanDonohoe/angular_rails_csrf'
 gem 'whenever', :require => false
-gem 'rails-assets-bootstrap-sass-official'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 source "https://rails-assets.org" do
   gem "rails-assets-angular-devise"
 end

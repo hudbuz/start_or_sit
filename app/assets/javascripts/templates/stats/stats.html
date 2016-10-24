@@ -1,4 +1,4 @@
-
+<div id="profiles">
 <div class="profile" id="left">
 
 <img src='{{player.stock}}'>
@@ -40,13 +40,13 @@
 
 <div class="profile" id="sosButton">
 
- <button ng-click="player.start_or_sit()">Start or Sit</button>
+ <button ng-click="player.start_or_sit()">Start or Sit</button><br>
 
 
 </div>
 
 <div class="profile" id="substitue" ng-if="player.substitute == true">
-<button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button>
+<button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button><br>
 <button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
 
   </div>
@@ -76,12 +76,8 @@
 </div>
 <button ng-click="player.right['clicked'] = false">Hide</button>
 </div>
-
-</div>
-
 </div>
 </div>
-
-
-
 </div>
+</div>
+

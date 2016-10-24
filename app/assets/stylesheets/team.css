@@ -1,6 +1,6 @@
 img {
-  height: 100px;
-  width: 100px;
+  height: 200;
+  width: 200;
 
 }
 
@@ -12,4 +12,17 @@ div .profile {
 div .active {
 
   background-color: #90EE90;
+}
+
+div #teambar {
+  margin: auto;
+   
+}
+
+div .player_matchup {
+  margin: auto;
+}
+
+div .player-container {
+  margin: auto;
 }
