@@ -6,7 +6,7 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
 
 
 
-
+  team.setUp = function() {
   TeamService.getTeam().then(function(data){
     if (data.status !== 200) {
       $state.go('login')
@@ -18,6 +18,8 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
     }
 
   })
+}
+team.setUp()
   
   team.qb = {}
   team.rb = {}

@@ -2,7 +2,7 @@
   
 function PlayerController($scope, $filter, position, PlayerService, $timeout, TeamService, Auth, $rootScope, $state) {
 
- 
+  
    
     var player = this
     player.data = $scope.$parent.team.players
@@ -96,13 +96,20 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
                
     })
      }
-     for (i = 0; i < $scope.$parent.team.lineup.length; i ++) {
-         if ($scope.$parent.team.lineup[i].position === position){
-            player.left = $scope.$parent.team.lineup[i]
+     player.setLeft = function() {
+      
+      var promise = TeamService.getTeam()
+        promise.then(function(resp){
+       
+     for (i = 0; i < resp.data.players.length; i ++) {
+         if (resp.data.players[i].position === position){
+            player.left = resp.data.players[i]
              player.stock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player.left.esbid+'.png'
              player.listStats('left')
          }
      }
+   })}
+   player.setLeft()
 
 
      player.start_or_sit = function() {

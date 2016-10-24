@@ -41,7 +41,7 @@ class Player < ApplicationRecord
 
   players.each_with_index do |team, index|
    
-
+    
     if team.team_name == name
       rank = index + 1
     end

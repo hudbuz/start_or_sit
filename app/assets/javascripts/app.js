@@ -95,9 +95,21 @@ angular
       }
     }
     })
+    .state('team.players', {
+      url: '/players/qb', 
+      templateUrl: 'players/index.html',
+      controller: 'PlayerController as player',
+      resolve: {
+        
+  
+      position: function() {
+        return "QB"
+      }
+    }
+    })
 
 
-       $urlRouterProvider.otherwise('/');
+       // $urlRouterProvider.otherwise('/');
 
 
   })
