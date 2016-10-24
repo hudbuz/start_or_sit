@@ -23,8 +23,11 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
   team.rb = {}
   team.wr = {}
   team.te = {}
+  team['newTeam'] = {}
+  team['newTeam']['players'] = {}
   team.players = players.data
   team.statTable = indexTable.data
+  team.error = false
  
 
 
@@ -45,15 +48,24 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
    var filtered =  $filter('filter')(team.players, position.toUpperCase())
     var searchedPlayer = $filter('filter')(filtered, team[position])
     team[position] = searchedPlayer[0]
+    team['newTeam']['players'][position] = team[position]
     team[position]['img_url'] = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+searchedPlayer[0].esbid+'.png'
    
     
   }
 
   team.createTeam = function() {
+    if ($('.ng-invalid').length !== 0){
+    
+      team.error = true
+    }
+    else {
+    resp = TeamService.createTeam(team.user.id, team['newTeam'])
 
-    debugger
-    resp = TeamService.createTeam(team.lineup.id, team)
+
+
+    $state.go('team', {}, {reload: true})
+  }
   }
   $rootScope.$on('changeLineup', function (event, data) {
     team.lineup = data.data.players

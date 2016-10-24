@@ -5,7 +5,7 @@ class Team < ApplicationRecord
 
 
   def update_team(data) 
-    binding.pry
+  
     @qb = Player.find_by(name: data['qb']['name'])
     @rb = Player.find_by(name: data['rb']['name'])
     @wr = Player.find_by(name: data['wr']['name'])

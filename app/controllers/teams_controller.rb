@@ -20,10 +20,10 @@ class TeamsController < ApplicationController
   end
 
   def update
-
-    if params['lineup']
-    @team = Team.find(params['lineup']['id'])
-    @team.update_team(params)
+  
+    if params['players']
+    @team = Team.find_by(user_id: params[:id])
+    @team.update_team(params['players'])
     render json: @team
     else 
       @team = Team.find_by(user_id: params[:id])

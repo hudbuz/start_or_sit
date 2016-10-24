@@ -7,26 +7,33 @@ Select Your Players
 
 <tr>
 <th> Your Team </th>
-<th> Edit Team</th>
+<th> Create Team</th>
 
 </tr>
-<tr id="qb"><td id="qb_pic"><img src="{{team.qb.img_url}}"></td>
- <td><label>QB: <input ng-model="team.qb.name" ng-change="team.searchFilter('qb')" ng-model-options="{debounce: 500}">{{team.qb[0].name}}</input></label></td>
+<form name="tform">
+<tr id="qb"><td id="qb_pic"><img src="{{team.qb.img_url}}" placeholder="Pick a QB"></td>
+ <td><label>QB: <input ng-model="team.qb.name"  ng-change="team.searchFilter('qb')" ng-model-options="{debounce: 500}" required>{{team.qb[0].name}}</input></label></td>
 </tr>
+
 <tr id="rb"><td id="rb_pic"><img src="{{team.rb.img_url}}"></td>
- <td><label>RB: <input ng-model="team.rb.name" ng-change="team.searchFilter('rb')" ng-model-options="{debounce: 500}">{{team.rb[0].name}}</input></label></td>
+ <td><label>RB: <input ng-model="team.rb.name" ng-change="team.searchFilter('rb')" ng-model-options="{debounce: 500}" required>{{team.rb[0].name}}</input></label></td>
 </tr>
+
 <tr id="wr"><td id="wr_pic"><img src="{{team.wr.img_url}}"></td>
- <td><label>WR: <input ng-model="team.wr.name" ng-change="team.searchFilter('wr')" ng-model-options="{debounce: 500}">{{team.wr[0].name}}</input></label></td>
+ <td><label>WR: <input ng-model="team.wr.name" ng-change="team.searchFilter('wr')" ng-model-options="{debounce: 500}" required>{{team.wr[0].name}}</input></label></td>
 </tr>
+
 <tr id="te"><td id="te_pic"><img src="{{team.te.img_url}}"></td>
- <td><label>TE: <input ng-model="team.te.name" ng-change="team.searchFilter('te')" ng-model-options="{debounce: 500}">{{team.te[0].name}}</input></label></td>
+ <td><label>TE: <input ng-model="team.te.name" ng-change="team.searchFilter('te')" ng-model-options="{debounce: 500}" required>{{team.te[0].name}}</input></label></td>
 </tr>
 
 
+</form>
 </table>
 
 
 
 
-<button ng-click="team.createTeam()">Save Team</button>
+<button ng-click="team.createTeam()">Save Team</button><div ng-show="team.error">
+Must Submit a full team!
+</div>

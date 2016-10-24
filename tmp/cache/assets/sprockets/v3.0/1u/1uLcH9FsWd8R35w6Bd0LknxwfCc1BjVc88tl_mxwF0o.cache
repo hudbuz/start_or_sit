@@ -1,14 +1,0 @@
-{:uriI"‹file://app/assets/javascripts/templates/nav/_nav.html?type=text/ng-html&id=743c0c41137c58963faed88742bb53b8ce318c72774e0f18140accaa0386c424:ET:load_pathI"app/assets/javascripts;T:filenameI"3app/assets/javascripts/templates/nav/_nav.html;T:	nameI"templates/nav/_nav;T:logical_pathI"templates/nav/_nav.html;T:content_typeI"text/ng-html;T:sourceI"±<div class="collapse navbar-collapse pull-right" ng-controller="navCtrl">
-  <ul class="nav navbar-nav">
-    <li><a href="#/home">Home</a></li>
-    <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
-    <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
-    <li ng-show="signedIn()"><a href="#/team">{{ user.username }}</a></li>
-    <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
-  </ul>
-</div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Afile-digest://app/assets/javascripts/templates/nav/_nav.html;TT:charsetI"
-utf-8;F:digest"%GˆrâñIDA>€åà½7cñ“	öÕºØOj­[ò–@CÜ:lengthi±:dependencies_digest"%ºÇ²w`p¯Ó0¡V¬P}{fÕÏõ¯bg¥eGS£:idI"E743c0c41137c58963faed88742bb53b8ce318c72774e0f18140accaa0386c424;F:
-mtimel+†ûüW
