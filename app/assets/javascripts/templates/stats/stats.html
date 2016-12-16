@@ -5,14 +5,14 @@
   <div class="profile" id="sosButton">
 
    <button ng-click="player.start_or_sit()">Start or Sit</button>
+   <div class="profile" id="substitue" class="col-lg-4" ng-if="player.substitute == true">
+   <button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button>
+   <button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
 
+     </div>
 
   </div>
-  <div class="profile" id="substitue" class="col-lg-4" ng-if="player.substitute == true">
-  <button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button>
-  <button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
 
-    </div>
   <br><br>
 <div class="profile col-lg-6 border-box" id="left">
 Your starter<br><input ng-model="player.left.name"></input><br>
@@ -57,7 +57,7 @@ Your starter<br><input ng-model="player.left.name"></input><br>
 
 
 
-<div class="profile col-lg-6" id="right">
+<div class="profile col-lg-6  " id="right">
 Compared to: <br><input ng-model="player.right.name" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
 <br>
 <div ng-if="player.right !== ''">

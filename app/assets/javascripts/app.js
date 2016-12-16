@@ -100,18 +100,18 @@ angular
       }
     }
     })
-     .state('team.k', {
-      url: '/k',
-      templateUrl: 'players/k.html',
-      controller: 'PlayerController as player',
-      resolve: {
-
-
-      position: function() {
-        return "K"
-      }
-    }
-    })
+    //  .state('team.k', {
+    //   url: '/k',
+    //   templateUrl: 'players/k.html',
+    //   controller: 'PlayerController as player',
+    //   resolve: {
+    //
+    //
+    //   position: function() {
+    //     return "K"
+    //   }
+    // }
+    // })
     .state('team.players', {
       url: '/players/qb',
       templateUrl: 'players/index.html',

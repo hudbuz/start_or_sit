@@ -3,12 +3,14 @@
     <div class="navbar-header">
 <a href="#/home" class="navbar-brand">Start or Sit</a>
 </div>
-  <ul class="nav navbar-nav">
+  <ul class="nav navbar-nav navbar-right">
+    <div class="nav-elements">
     <div><a href="#/home">Home</a></div>
     <div ng-hide="signedIn()"><a href="#/login">Log In</a></div>
     <div ng-hide="signedIn()"><a href="#/register">Register</a></div>
     <div ng-show="signedIn()"><a href="#/team">Team: {{ user.username }}</a></div>
     <div ng-show="signedIn()"><a ng-click="logout()">Log Out</a></div>
+  </div>
   </ul>
 </div>
 </nav>

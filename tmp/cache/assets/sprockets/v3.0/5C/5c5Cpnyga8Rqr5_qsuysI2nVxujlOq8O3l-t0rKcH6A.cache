@@ -1,19 +1,0 @@
-{:uriI"file://app/assets/javascripts/templates/players/wr.html?type=text/ng-html&id=5ca21ab8de9c6ea47b0ec695172a170c37552915937a7a41d2101e22c44e9982:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/wr.html;T:	nameI"templates/players/wr;T:logical_pathI"templates/players/wr.html;T:content_typeI"text/ng-html;T:sourceI"#<div class="player_matchup">
-
-
-  <h2>Wide Receivers</h2>
-
-  Your starter<br><input ng-model="player.left.name"></input>
-
-
-  Compared to: <input ng-model="player.right.name" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
-
-
-
-<br><br><br>
-<stats></stats>
-  </div>;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/wr.html;TT:charsetI"
-utf-8;F:digest"%§tõ ‹ïÔ]øQ_èœås“Äiœ›‘êi	Q¸;õ:lengthi#:dependencies_digest"%(Â‰d‰ó+”¯éØ‚:ÍÒ‡—È³Và¼,ùv% :idI"E5ca21ab8de9c6ea47b0ec695172a170c37552915937a7a41d2101e22c44e9982;F:
-mtimel+')X
