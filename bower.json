@@ -7,8 +7,6 @@
       "angular-ui-router": "latest",
       "AngularDevise": "angular-devise#^1.3.0"
     }
-  },
-  "dependencies": {
-    "AngularDevise": "angular-devise#^1.3.0"
   }
+
 }

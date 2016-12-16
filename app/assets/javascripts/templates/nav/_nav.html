@@ -1,5 +1,8 @@
-
-<div class="collapse navbar navbar-collapse pull-right" ng-controller="navCtrl">
+<nav class="navbar navbar-default">
+  <div class="container-fluid" ng-controller="navCtrl">
+    <div class="navbar-header">
+<a href="#/home" class="navbar-brand">Start or Sit</a>
+</div>
   <ul class="nav navbar-nav">
     <div><a href="#/home">Home</a></div>
     <div ng-hide="signedIn()"><a href="#/login">Log In</a></div>
@@ -8,3 +11,4 @@
     <div ng-show="signedIn()"><a ng-click="logout()">Log Out</a></div>
   </ul>
 </div>
+</nav>

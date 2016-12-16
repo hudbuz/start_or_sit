@@ -2,9 +2,8 @@ function stats() {
   return {
   templateUrl: 'stats/stats.html'
 
-
 }
-debugger
+
 }
 
 angular

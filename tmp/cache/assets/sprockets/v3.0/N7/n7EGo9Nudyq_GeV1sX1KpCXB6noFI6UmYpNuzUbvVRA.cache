@@ -1,0 +1,29 @@
+{:uriI"Œfile://app/assets/javascripts/templates/players/k.html?type=text/ng-html&id=53b419682624a33414938722ec714db56cabfdfb64abc7b08e1288934b37c2f2:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/templates/players/k.html;T:	nameI"templates/players/k;T:logical_pathI"templates/players/k.html;T:content_typeI"text/ng-html;T:sourceI"%<div class="player_matchup">
+
+
+  <h2>Kicker</h2>
+
+
+
+  Your starter<br><input ng-model="player.left.name"></input>
+
+
+
+  Compared to: <input ng-model="player.right.name" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
+
+
+
+
+<br><br><br>
+
+
+<stats></stats>
+
+
+
+
+  </div>;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Bfile-digest://app/assets/javascripts/templates/players/k.html;TT:charsetI"
+utf-8;F:digest"%ŠDqøšs+Œ3²ò”Ívô²]çÎ¡JÏp%Zn­:lengthi%:dependencies_digest"%IÓã$#-HÌvÎÉYÉf]H´àÅŠ¥ôBXûX¿ÄòÖ:idI"E53b419682624a33414938722ec714db56cabfdfb64abc7b08e1288934b37c2f2;F:
+mtimel+îœX

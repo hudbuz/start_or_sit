@@ -1,44 +1,0 @@
-{:uriI"êfile://app/assets/javascripts/templates/team/teamForm.html?type=text/ng-html&id=2a7bb0d09397a4ea84827bdeab743527c799820348a11e14ae9e7ba2709c4ad1:ET:load_pathI"app/assets/javascripts;T:filenameI"8app/assets/javascripts/templates/team/teamForm.html;T:	nameI"templates/team/teamForm;T:logical_pathI"!templates/team/teamForm.html;T:content_typeI"text/ng-html;T:sourceI"ŸSelect Your Players
-
-
-
-
-<table style='50%'>
-
-<tr>
-<th> Your Team </th>
-<th> Create Team</th>
-
-</tr>
-<form name="tform">
-<tr id="qb"><td id="qb_pic"><img src="{{team.qb.img_url}}" placeholder="Pick a QB"></td>
- <td><label>QB: <input ng-model="team.qb.name"  ng-change="team.searchFilter('qb')" ng-model-options="{debounce: 500}" required>{{team.qb[0].name}}</input></label></td>
-</tr>
-
-<tr id="rb"><td id="rb_pic"><img src="{{team.rb.img_url}}"></td>
- <td><label>RB: <input ng-model="team.rb.name" ng-change="team.searchFilter('rb')" ng-model-options="{debounce: 500}" required>{{team.rb[0].name}}</input></label></td>
-</tr>
-
-<tr id="wr"><td id="wr_pic"><img src="{{team.wr.img_url}}"></td>
- <td><label>WR: <input ng-model="team.wr.name" ng-change="team.searchFilter('wr')" ng-model-options="{debounce: 500}" required>{{team.wr[0].name}}</input></label></td>
-</tr>
-
-<tr id="te"><td id="te_pic"><img src="{{team.te.img_url}}"></td>
- <td><label>TE: <input ng-model="team.te.name" ng-change="team.searchFilter('te')" ng-model-options="{debounce: 500}" required>{{team.te[0].name}}</input></label></td>
-</tr>
-
-
-</form>
-</table>
-
-
-
-
-<button ng-click="team.createTeam()">Save Team</button><div ng-show="team.error">
-Must Submit a full team!
-</div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ffile-digest://app/assets/javascripts/templates/team/teamForm.html;TT:charsetI"
-utf-8;F:digest"%•Õ@¡V÷∫≥ãB≥jv`m∆CùD9K‹”øT’÷ﬂr:lengthiŸ:dependencies_digest"%/T}˛m(§øª-w}´óÖ:	¢åæ∑!@hcü^É5:idI"E2a7bb0d09397a4ea84827bdeab743527c799820348a11e14ae9e7ba2709c4ad1;F:
-mtimel+}X

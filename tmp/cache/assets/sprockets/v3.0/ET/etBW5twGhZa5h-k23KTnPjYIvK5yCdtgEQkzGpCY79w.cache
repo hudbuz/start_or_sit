@@ -1,0 +1,19 @@
+{:uriI"çfile://app/assets/javascripts/templates/players/te.html?type=text/ng-html&id=bdc1e1f900f8255a49ee2221591439a8a00f559b37282c8a2670565727d866b7:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/te.html;T:	nameI"templates/players/te;T:logical_pathI"templates/players/te.html;T:content_typeI"text/ng-html;T:sourceI"}<div class="player_matchup">
+
+
+
+    <div id="positionTitle"><h2>Tight End</h2></div>
+
+
+   
+<stats></stats>
+
+
+
+
+  </div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/te.html;TT:charsetI"
+utf-8;F:digest"%J2∞u<∏í;—%∑sn£$s	0á(†pœL÷ªß:lengthi}:dependencies_digest"%˜øº/ß$ÀÂÌëøÖ˙‚”“>Ë\ù:BÓΩÛ˚:idI"Ebdc1e1f900f8255a49ee2221591439a8a00f559b37282c8a2670565727d866b7;F:
+mtimel+£à<X

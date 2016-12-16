@@ -1,83 +1,95 @@
-<div id="profiles">
-<div class="profile" id="left">
 
-<img src='{{player.stock}}'>
+
+<div id="profiles" class="jumbotron">
+
+  <div class="profile" id="sosButton">
+
+   <button ng-click="player.start_or_sit()">Start or Sit</button>
+
+
+  </div>
+  <div class="profile" id="substitue" class="col-lg-4" ng-if="player.substitute == true">
+  <button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button>
+  <button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
+
+    </div>
+  <br><br>
+<div class="profile col-lg-6 border-box" id="left">
+Your starter<br><input ng-model="player.left.name"></input><br>
+<img src='{{player.stock}}' />
 <h3 id="playerTitle">
 {{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
-<ul>
+<div id="lStats">
 <h4>Stats</h4>
-<li>Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
-<li>Week Points: {{player.left.week_points}} </li>
-<li>Season Points: {{player.left.season_points}} </li>
-<li>Season Projected Points: {{player.left.season_projected_points}} </li>
 
-</ul>
+<li class="list-group-item">Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
+<li class="list-group-item">Week Points: {{player.left.week_points}} </li>
+<li class="list-group-item">Season Points: {{player.left.season_points}} </li>
+<li class="list-group-item">Season Projected Points: {{player.left.season_projected_points}} </li>
 
-<strong><div ng-if="player.compared">S.O.S. Value: {{player.left['sosScore']}}</div></strong>
+
 
 <div class="morestats">
 
 
-<div ng-click="player.left['clicked'] = true">Show More </div>
+<div ng-click="player.left['clicked'] = true"><div ng-show="!player.left.clicked">Show More </div></div>
 
 
 <div ng-if="player.left['clicked'] === true">
 
+
+<div ng-repeat="(name,stat) in player.left.stats">
+  <li class="list-group-item">{{name}}: {{stat}}</li>
+
+</div>
+
   <h5>Matchup: {{player.left['opponent']['name'] }}</h5>
 <h5>Defense Rank: {{player.left['opponent']['rank']}}</h5>
 
-<h4>Stats</h4>
-<div ng-repeat="(name,stat) in player.left.stats">
-  <li>{{name}}: {{stat}}</li>
+<strong><div ng-if="player.compared">S.O.S. Value: {{player.left['sosScore']}}</div></strong>
 
-</div>
 <button ng-click="player.left['clicked'] = false">Hide</button>
 </div>
-
+</div>
 </div>
 
 </div>
 
-<div class="profile" id="sosButton">
-
- <button ng-click="player.start_or_sit()">Start or Sit</button><br>
 
 
-</div>
-
-<div class="profile" id="substitue" ng-if="player.substitute == true">
-<button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button><br>
-<button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
-
-  </div>
-<div class="profile" id="right">
-<div ng-if="player.right !== ''"><br>
-  <img src='{{player.rstock}}'>
-  <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.teamAbbr}}</h3>
-<ul>
+<div class="profile col-lg-6" id="right">
+Compared to: <br><input ng-model="player.right.name" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
+<br>
+<div ng-if="player.right !== ''">
+  <img src='{{player.rstock}}'/>
+  <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.team_name}}</h3>
 <h4>Stats</h4>
-<li>Week {{player.current_week}}: Projected Points: {{player.right.week_projected_points}} </li>
-<li>Week Points: {{player.right.week_points}} </li>
-<li>Season Points: {{player.right.season_points}} </li>
-<li>Season Projected Points: {{player.right.season_projected_points}} </li>
-</ul>
-<strong><div ng-if="player.compared">S.O.S. Value: {{player.right['sosScore']}}</div></strong>
+
+<div id="rStats">
+<li class="list-group-item">Week {{player.current_week}}: Projected Points: {{player.right.week_projected_points}} </li>
+<li class="list-group-item">Week Points: {{player.right.week_points}} </li>
+<li class="list-group-item">Season Points: {{player.right.season_points}} </li>
+<li class="list-group-item">Season Projected Points: {{player.right.season_projected_points}} </li>
+
 <div class="morestats">
 
 
-<div ng-click="player.right['clicked'] = true">Show More </div>
+<div ng-click="player.right['clicked'] = true"><div ng-show="!player.right.clicked">Show More </div></div>
 <div ng-if="player.right['clicked'] === true">
+
+
+
+<div ng-repeat="(name,stat) in player.right.stats">
+  <li class="list-group-item">{{name}}: {{stat}}</li>
+</div>
 <h5>Matchup: {{player.right['opponent']['name'] }}</h5>
 <h5>Defense Rank: {{player.right['opponent']['rank']}}</h5>
 
-<h4>Stats</h4>
-<div ng-repeat="(name,stat) in player.right.stats">
-  <li>{{name}}: {{stat}}</li>
-</div>
+<strong><div ng-if="player.compared">S.O.S. Value: {{player.right['sosScore']}}</div></strong>
 <button ng-click="player.right['clicked'] = false">Hide</button>
 </div>
 </div>
 </div>
 </div>
 </div>
-
+</div>

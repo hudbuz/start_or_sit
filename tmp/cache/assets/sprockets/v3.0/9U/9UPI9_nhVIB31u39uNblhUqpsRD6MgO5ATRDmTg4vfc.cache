@@ -1,0 +1,20 @@
+{:uriI"‹file://app/assets/javascripts/templates/nav/_nav.html?type=text/ng-html&id=1c2b711d0c4126d8d9f5fdd82c0a5d24cbb84f9fbf7487d4812619009b0f5e82:ET:load_pathI"app/assets/javascripts;T:filenameI"3app/assets/javascripts/templates/nav/_nav.html;T:	nameI"templates/nav/_nav;T:logical_pathI"templates/nav/_nav.html;T:content_typeI"text/ng-html;T:sourceI"8<nav class="navbar navbar-default">
+  <div class="container-fluid" ng-controller="navCtrl">
+    <div class="navbar-header">
+<a href="#/home" class="navbar-brand">Start or Sit</a>
+</div>
+  <ul class="nav navbar-nav">
+    <div><a href="#/home">Home</a></div>
+    <div ng-hide="signedIn()"><a href="#/login">Log In</a></div>
+    <div ng-hide="signedIn()"><a href="#/register">Register</a></div>
+    <div ng-show="signedIn()"><a href="#/team">Team: {{ user.username }}</a></div>
+    <div ng-show="signedIn()"><a ng-click="logout()">Log Out</a></div>
+  </ul>
+</div>
+</nav>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Afile-digest://app/assets/javascripts/templates/nav/_nav.html;TT:charsetI"
+utf-8;F:digest"%Ÿu¼¨q¦@ç_®\ãÀv\²6¨@ï’«âWÍ‰s_:lengthi8:dependencies_digest"%lùÈÏ™İc‘¾pù'‹
+?ùK¨ìüÚü[˜IÄ«ùİ®:idI"E1c2b711d0c4126d8d9f5fdd82c0a5d24cbb84f9fbf7487d4812619009b0f5e82;F:
+mtimel+v<X

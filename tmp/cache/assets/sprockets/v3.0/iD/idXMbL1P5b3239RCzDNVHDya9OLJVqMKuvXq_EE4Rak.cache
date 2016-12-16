@@ -1,0 +1,14 @@
+{:uriI"file://app/assets/javascripts/templates/players/index.html?type=text/ng-html&id=1e2c6cd8e0bf401f75521d00951d70db17bfd63fd095a9242169a1f03a1212d0:ET:load_pathI"app/assets/javascripts;T:filenameI"8app/assets/javascripts/templates/players/index.html;T:	nameI"templates/players/index;T:logical_pathI"!templates/players/index.html;T:content_typeI"text/ng-html;T:sourceI"í<h1>testing</h1>
+
+<div ng-repeat="position in player.filteredList">
+
+  <img ng-src='http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/{{position.esbid}}.png'><img>
+
+  <div>{{position.name}}</div>
+
+
+</div>;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ffile-digest://app/assets/javascripts/templates/players/index.html;TT:charsetI"
+utf-8;F:digest"%ÇGeCÕ"‚T^-nö„ßqNëû‹gÏ‰pcğ4óXÇ:lengthií:dependencies_digest"%÷3´“ê7á¬blµƒ¨SAi_xeíòÔ\W{id:idI"E1e2c6cd8e0bf401f75521d00951d70db17bfd63fd095a9242169a1f03a1212d0;F:
+mtimel+ |X

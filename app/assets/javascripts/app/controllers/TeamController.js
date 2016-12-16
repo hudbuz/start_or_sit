@@ -1,5 +1,5 @@
 (function() {
-  
+
 function TeamController($scope, Auth, $state, $$state, players, $filter, TeamService, indexTable, $rootScope) {
 
   var team = this
@@ -7,20 +7,29 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
 
 
   team.setUp = function() {
+    console.log('b')
   TeamService.getTeam().then(function(data){
+    debugger
+    console.log('c')
     if (data.status !== 200) {
       $state.go('login')
+
 
     }
     else {
       team.user = Auth.currentUser().$$state.value
       team.lineup = data.data.players
+      console.log('d')
     }
 
   })
+  console.log('e')
 }
+
+console.log('a')
 team.setUp()
-  
+console.log('g')
+
   team.qb = {}
   team.rb = {}
   team.wr = {}
@@ -30,18 +39,18 @@ team.setUp()
   team.players = players.data
   team.statTable = indexTable.data
   team.error = false
- 
+
 
 
   team.authorize = function() {
-    
+
   if (Auth.currentUser().$$state.status === 1) {
-    
+
     team.user = Auth.currentUser().$$state.value
 
   }
   else {
- 
+
     $state.go('login')
   }
 }
@@ -52,13 +61,13 @@ team.setUp()
     team[position] = searchedPlayer[0]
     team['newTeam']['players'][position] = team[position]
     team[position]['img_url'] = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+searchedPlayer[0].esbid+'.png'
-   
-    
+
+
   }
 
   team.createTeam = function() {
     if ($('.ng-invalid').length !== 0){
-    
+
       team.error = true
     }
     else {
@@ -71,13 +80,13 @@ team.setUp()
   }
   $rootScope.$on('changeLineup', function (event, data) {
     team.lineup = data.data.players
-      
-        
+
+
     });
 
-   
 
-  
+
+
 
 
 }

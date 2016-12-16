@@ -1,0 +1,15 @@
+{:uriI"file://app/assets/javascripts/templates/players/index.html?type=text/ng-html&id=2a6d320a6f2724566af483167fe136dea298dd08c5d84071d24267aa49112b4b:ET:load_pathI"app/assets/javascripts;T:filenameI"8app/assets/javascripts/templates/players/index.html;T:	nameI"templates/players/index;T:logical_pathI"!templates/players/index.html;T:content_typeI"text/ng-html;T:sourceI"í<h1>testing</h1>
+
+<div ng-repeat="position in player.filteredList">
+
+  <img ng-src='http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/{{position.esbid}}.png'><img>
+
+  <div>{{position.name}}</div>
+
+
+</div>;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ffile-digest://app/assets/javascripts/templates/players/index.html;TT:charsetI"
+utf-8;F:digest"%ÇGeCÕ"‚T^-nö„ßqNëû‹gÏ‰pcğ4óXÇ:lengthií:dependencies_digest"%ì$‹aOt
+ú‹ÚâHğk%!Ók?pì"eİzá…ú+:idI"E2a6d320a6f2724566af483167fe136dea298dd08c5d84071d24267aa49112b4b;F:
+mtimel+ |X

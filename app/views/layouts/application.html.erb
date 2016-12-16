@@ -4,28 +4,29 @@
 
   <title>Start or Sit</title>
   <%= stylesheet_link_tag    'application', media: 'all'%>
-  
+
   <%= javascript_include_tag 'application' %>
+
+
 
   <%= csrf_meta_tags %>
 
 </head>
 <body>
-<div id="header">
-<h1>Start or Sit</h1>
 
-</div>
+
   <div ng-app="app">
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
- 
 
 
+  <div class="container">
 
-<br>
+
+<div ng-include="'nav/_nav.html'"></div>
+
+<div class="jumbotron">
 <%= yield %>
 </div>
+
  <% flash.each do |key, value| %>
  <% binding.pry %>
   <div class="alert alert-<%= key %>">
@@ -37,6 +38,7 @@
     </ul>
   </div>
 <% end %>
-
+</div>
+</div>
 </body>
 </html>

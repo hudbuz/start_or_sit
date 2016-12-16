@@ -28,10 +28,13 @@ gem 'responders'
 gem 'angular-rails-templates', '~> 1.0'
 gem 'angular_rails_csrf', :git => 'git://github.com/AlanDonohoe/angular_rails_csrf'
 gem 'whenever', :require => false
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'angular-ui-bootstrap-rails'
+#gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap-sass', '~> 3.2.0'
 source "https://rails-assets.org" do
   gem "rails-assets-angular-devise"
 end
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

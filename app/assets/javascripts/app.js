@@ -1,11 +1,16 @@
 angular
-  .module('app', ['ui.router', 'templates', 'Devise'])
+  .module('app', ['ui.router', 'templates', 'Devise','ui.bootstrap'])
   .config(function($stateProvider, $urlRouterProvider){
 
     $stateProvider
     .state('home', {
-      url: '/', 
+      url: '/',
       templateUrl: 'home.html'
+      })
+      .state('compare', {
+        url: '/compare',
+        templateUrl: 'compare.html',
+        controller: 'CompareController as compare'
       })
       .state('login', {
         url: '/login',
@@ -29,17 +34,17 @@ angular
 })
 
     .state('team', {
-      url: '/team', 
-      templateUrl: 'team/team.html', 
-      controller: 'TeamController as team', 
+      url: '/team',
+      templateUrl: 'team/team.html',
+      controller: 'TeamController as team',
       resolve: {
         userTeam: function(TeamService, $http){
-          
+
           return TeamService.getTeam()
         },
         players: function(PlayerService, $http){
           return PlayerService.getPlayers()
-        }, 
+        },
         indexTable: function(IndexService, $http) {
         return IndexService.getIndices()
       }
@@ -48,60 +53,72 @@ angular
       }
     })
     .state('team.qb', {
-      url: '/qb', 
-      templateUrl: 'players/qb.html', 
+      url: '/qb',
+      templateUrl: 'players/qb.html',
       controller: 'PlayerController as player',
       resolve: {
-        
-       
+
+
       position: function() {
         return "QB"
       }
     }
     })
     .state('team.rb', {
-      url: '/rb', 
+      url: '/rb',
       templateUrl: 'players/rb.html',
       controller: 'PlayerController as player',
       resolve: {
-        
-      
+
+
       position: function() {
         return "RB"
       }
     }
     })
     .state('team.wr', {
-      url: '/wr', 
+      url: '/wr',
       templateUrl: 'players/wr.html',
       controller: 'PlayerController as player',
       resolve: {
-        
-       
+
+
       position: function() {
         return "WR"
       }
     }
     })
     .state('team.te', {
-      url: '/te', 
+      url: '/te',
       templateUrl: 'players/te.html',
       controller: 'PlayerController as player',
       resolve: {
-        
-       
+
+
       position: function() {
         return "TE"
       }
     }
     })
+     .state('team.k', {
+      url: '/k',
+      templateUrl: 'players/k.html',
+      controller: 'PlayerController as player',
+      resolve: {
+
+
+      position: function() {
+        return "K"
+      }
+    }
+    })
     .state('team.players', {
-      url: '/players/qb', 
+      url: '/players/qb',
       templateUrl: 'players/index.html',
       controller: 'PlayerController as player',
       resolve: {
-        
-  
+
+
       position: function() {
         return "QB"
       }

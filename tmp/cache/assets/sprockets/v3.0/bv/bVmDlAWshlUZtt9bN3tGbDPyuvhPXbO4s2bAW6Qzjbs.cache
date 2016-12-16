@@ -1,0 +1,16 @@
+{:uriI"‡file://app/assets/javascripts/templates/home.html?type=text/ng-html&id=7f22bacb5bcd77537c06d629600471e0a14399510ee76a865da954f2ae5f2b36:ET:load_pathI"app/assets/javascripts;T:filenameI"/app/assets/javascripts/templates/home.html;T:	nameI"templates/home;T:logical_pathI"templates/home.html;T:content_typeI"text/ng-html;T:sourceI"·
+<div class="nav">
+<a ui-sref="home">Home</a>
+
+
+
+ 
+</div>
+    <div class="col-md-6 col-md-offset-3"></div>
+      <div ng-include="'nav/_nav.html'"></div>
+      <ui-view></ui-view>
+   ;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"=file-digest://app/assets/javascripts/templates/home.html;TT:charsetI"
+utf-8;F:digest"%ÿ½wÆHêæœ*0µš\ÿ>IüïHó!+Qù+ áf:lengthi·:dependencies_digest"%	`UXvîA|Ë'«ôY74ÈteRAkÉƒÓóœ8ƒ:idI"E7f22bacb5bcd77537c06d629600471e0a14399510ee76a865da954f2ae5f2b36;F:
+mtimel+•\X

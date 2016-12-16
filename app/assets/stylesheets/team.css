@@ -1,3 +1,7 @@
+.nav, .pagination, .carousel, .panel-title a {
+   cursor: pointer;
+}
+
 img {
   height: 200;
   width: 200;
@@ -16,7 +20,7 @@ div .active {
 
 div #teambar {
   margin: auto;
-   
+
 }
 
 div .player_matchup {

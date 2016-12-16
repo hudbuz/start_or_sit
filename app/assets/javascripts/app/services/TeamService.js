@@ -1,17 +1,19 @@
 (function() {
-  
+
 
     function TeamService($http, Auth) {
 
 
       this.getTeam = function() {
+        
+        console.log('f')
        if (Auth.currentUser().$$state.status === 1){
        return $http.get('http://localhost:3000/teams/'+Auth.currentUser().$$state.value.id+'.json')
       }
-      
+
     }
       this.createTeam = function(id, data) {
-        
+
         return $http.patch('http://localhost:3000/teams/'+id, data)
       }
 
@@ -23,7 +25,7 @@
 
     }
 
-angular 
+angular
   .module('app')
   .service('TeamService', TeamService)
 

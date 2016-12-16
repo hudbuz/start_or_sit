@@ -1,0 +1,20 @@
+{:uriI"Œfile://app/assets/javascripts/templates/players/k.html?type=text/ng-html&id=c23abf2066480031e556ab62ecad08e1e60d3941d65de019794718a6bbd0a59f:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/templates/players/k.html;T:	nameI"templates/players/k;T:logical_pathI"templates/players/k.html;T:content_typeI"text/ng-html;T:sourceI"{<div class="player_matchup col-lg-10">
+
+
+  <div id="positionTitle"><h2>Kicker</h2></div>
+
+
+
+
+
+<stats></stats>
+
+
+
+
+  </div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Bfile-digest://app/assets/javascripts/templates/players/k.html;TT:charsetI"
+utf-8;F:digest"%^\´ÐîV¤nhþ{\±pûÛnÛTÈudU­‰ÎôÇ$™:lengthi{:dependencies_digest"%i»&Mµü*%{ðšl£Ì¢·Ú¹ÖMÿÖMI²u×oô:idI"Ec23abf2066480031e556ab62ecad08e1e60d3941d65de019794718a6bbd0a59f;F:
+mtimel+F‰<X

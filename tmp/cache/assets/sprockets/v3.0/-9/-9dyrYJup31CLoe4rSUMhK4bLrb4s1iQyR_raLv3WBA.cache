@@ -1,0 +1,26 @@
+{:uriI"Œfile://app/assets/javascripts/templates/team/team.html?type=text/ng-html&id=d8aa4c2b8c4b1286567ef8191a43ed388f585367436b76d6590b7c0bf2c2ed97:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/templates/team/team.html;T:	nameI"templates/team/team;T:logical_pathI"templates/team/team.html;T:content_typeI"text/ng-html;T:sourceI"ï
+
+
+Welcome {{team.user.username}}
+
+
+
+
+<div ng-if="team.lineup.length < 1">
+
+  <tform>
+
+  </tform>
+
+</div>
+
+<div ng-if="team.lineup.length > 1">
+
+  <teambar></teambar>
+</div>
+<div class="player-container col-lg-9"><ui-view></ui-view></div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Bfile-digest://app/assets/javascripts/templates/team/team.html;TT:charsetI"
+utf-8;F:digest"%½´Fƒbh5tQÛ'–Û¤IV—õn`Ôâ¡c‚è‡sNuÌ:lengthiï:dependencies_digest"%§ëÉ†”ò¸›F|ñ;J!å­zógb/oÑ$«`:idI"Ed8aa4c2b8c4b1286567ef8191a43ed388f585367436b76d6590b7c0bf2c2ed97;F:
+mtimel+âƒ<X
