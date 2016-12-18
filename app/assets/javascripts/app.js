@@ -10,8 +10,15 @@ angular
       .state('compare', {
         url: '/compare',
         templateUrl: 'compare.html',
-        controller: 'CompareController as compare'
-      })
+        controller: 'CompareController as player',
+        resolve: {
+          players: function(PlayerService, $http){
+            return PlayerService.getPlayers()
+          },
+          indexTable: function(IndexService, $http) {
+          return IndexService.getIndices()
+        }
+      }})
       .state('login', {
         url: '/login',
         templateUrl: 'auth/login.html',

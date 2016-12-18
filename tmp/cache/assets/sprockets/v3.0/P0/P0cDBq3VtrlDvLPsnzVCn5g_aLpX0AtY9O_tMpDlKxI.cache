@@ -1,0 +1,19 @@
+{:uriI"çfile://app/assets/javascripts/templates/players/rb.html?type=text/ng-html&id=8faa5872654eed14b32666ab5de86637d372f42e22f7a3b7d33dfd7ac53935b7:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/rb.html;T:	nameI"templates/players/rb;T:logical_pathI"templates/players/rb.html;T:content_typeI"text/ng-html;T:sourceI"}<div class="player_matchup">
+
+
+
+    <div id="positionTitle"><h2>Running Back</h2></div>
+
+
+<stats></stats>
+
+
+
+
+
+  </div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/rb.html;TT:charsetI"
+utf-8;F:digest"%;åÿMçÇ∆`∆ÑË€µÈk(ΩJx?ùëÈFv?#‰:lengthi}:dependencies_digest"%Q;Lá¸§œ#$ñ¢åmÁpíª∞ò§ó_E∞6râ°:idI"E8faa5872654eed14b32666ab5de86637d372f42e22f7a3b7d33dfd7ac53935b7;F:
+mtimel+ØbTX

@@ -4,7 +4,7 @@
 
   <div class="profile" id="sosButton">
 
-   <button ng-click="player.start_or_sit()">Start or Sit</button>
+     <button ng-click="player.start_or_sit()">Start or Sit</button>
    <div class="profile" id="substitue" class="col-lg-4" ng-if="player.substitute == true">
    <button ng-click="player.switchPlayer('left')">Start {{player.left.name}}</button>
    <button ng-click="player.switchPlayer('right')">Start {{player.right.name}}</button>
@@ -32,7 +32,7 @@ Your starter<br><input ng-model="player.left.name"></input><br>
 <div class="morestats">
 
 
-<div ng-click="player.left['clicked'] = true"><div ng-show="!player.left.clicked">Show More </div></div>
+<div ng-click="player.left['clicked'] = true"><button ng-show="!player.left.clicked">Show More </button></div>
 
 
 <div ng-if="player.left['clicked'] === true">
@@ -74,7 +74,7 @@ Compared to: <br><input ng-model="player.right.name" ng-change="player.searchFil
 <div class="morestats">
 
 
-<div ng-click="player.right['clicked'] = true"><div ng-show="!player.right.clicked">Show More </div></div>
+<div ng-click="player.right['clicked'] = true"><button ng-show="!player.right.clicked">Show More </button></div>
 <div ng-if="player.right['clicked'] === true">
 
 
