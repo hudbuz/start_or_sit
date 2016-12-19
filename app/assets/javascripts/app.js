@@ -133,7 +133,7 @@ angular
     })
 
 
-       $urlRouterProvider.otherwise('/compare');
+      // $urlRouterProvider.otherwise('/compare');
 
 
   })
