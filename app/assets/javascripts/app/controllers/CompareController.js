@@ -11,46 +11,47 @@
 
         player.current_week = 15
         player.left = ""
-        player.stock = ""
+        player.leftstock = ""
 
         player.right = ""
-        player.rstock = ""
+        player.rightstock = ""
         player.left['clicked'] = false
         player.right['clicked'] = false
         player.statTable = indexTable.data
 
 
         player.filteredList = $filter('filter')(player.data, position)
-        debugger
+
         player.comapred = false
         player.substitute = false
 
 
-        player.searchFilter = function($event) {
+        player.searchFilter = function(side) {
+          var stock = side + 'stock'
           debugger
           if (position === null){
             player.filteredList = player.data
           }
-          if (player.right.name === ''){
-            player.right = ""
-            player.rstock = ""
+          if (player[side].name === ''){
+            player[side] = ""
+            player[stock] = ""
             return null
           }
-          if (player.right.player_id) {
-            var name = player.right.name
-            player.right = {}
-            player.rstock = ''
-            player.right['name'] = name
+          if (player[side].player_id) {
+            var name = player[side].name
+            player[side] = {}
+            player[stock] = ''
+            player[side]['name'] = name
 
           }
 
-          var search = $filter('filter')(player.filteredList, player.right)[0]
+          var search = $filter('filter')(player.filteredList, player[side])[0]
 
-          player.right = search
+          player[side] = search
 
 
-          player.rstock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player.right.esbid+'.png'
-          player.listStats('right')
+          player[stock] = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player[side].esbid+'.png'
+          player.listStats(side)
           // PlayerService.getPlayer(search[0].player_id).then(function(resp){
 
           //
@@ -164,8 +165,10 @@
          //
         //  }
          player.reset = function() {
+           player.left = ""
+           player.leftstock = ""
             player.right = ""
-            player.rstock = ""
+            player.rightstock = ""
             player.left['clicked'] = false
             player.right['clicked'] = false
             player.comapred = false

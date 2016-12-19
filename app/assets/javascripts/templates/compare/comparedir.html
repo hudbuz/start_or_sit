@@ -5,14 +5,15 @@
   <div class="profile" id="sosButton">
 
      <button ng-click="player.start_or_sit()">Start or Sit</button>
+     <button ng-click="player.reset()">Reset</button>
 
   </div>
 
   <br><br>
-<div class="profile col-lg-6 border-box" id="left">
-Your starter<br><input ng-model="player.left.name"></input><br>
+<div class="profile col-md-6 border-box" id="left">
+Your starter<br><input ng-model="player.left.name" ng-change="player.searchFilter('left')" ng-model-options="{debounce: 500}"></input><br>
 
-<img src='{{player.stock}}' />
+<img src='{{player.leftstock}}' />
 <h3 id="playerTitle">
 {{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
 <div id="lStats">
@@ -54,12 +55,12 @@ Your starter<br><input ng-model="player.left.name"></input><br>
 
 
 
-<div class="profile col-lg-6  " id="right">
+<div class="profile col-md-6  " id="right">
 
-Compared to: <br><input ng-model="player.right.name" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
+Compared to: <br><input ng-model="player.right.name" ng-change="player.searchFilter('right')" ng-model-options="{debounce: 500}"></input>
 <br>
 
-  <img src='{{player.rstock}}'/>
+  <img src='{{player.rightstock}}'/>
   <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.team_name}}</h3>
 <h4>Stats</h4>
 

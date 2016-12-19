@@ -14,7 +14,7 @@
   </div>
 
   <br><br>
-<div class="profile col-lg-6 border-box" id="left">
+<div class="profile col-md-6 border-box" id="left">
 Your starter<br><input ng-model="player.left.name"></input><br>
 <img src='{{player.stock}}' />
 <h3 id="playerTitle">
@@ -57,7 +57,7 @@ Your starter<br><input ng-model="player.left.name"></input><br>
 
 
 
-<div class="profile col-lg-6  " id="right">
+<div class="profile col-md-6  " id="right">
 Compared to: <br><input ng-model="player.right.name" ng-change="player.searchFilter()" ng-model-options="{debounce: 500}"></input>
 <br>
 <div ng-if="player.right !== ''">
