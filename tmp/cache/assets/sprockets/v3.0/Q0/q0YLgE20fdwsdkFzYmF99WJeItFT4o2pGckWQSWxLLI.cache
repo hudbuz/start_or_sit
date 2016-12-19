@@ -1,35 +1,0 @@
-{:uriI"file://app/assets/javascripts/templates/team/teambar.html?type=text/ng-html&id=68692911a691d3af221bf34e3f7b2635b52eded77b6e0c6d77f84c1f3ad47697:ET:load_pathI"app/assets/javascripts;T:filenameI"7app/assets/javascripts/templates/team/teambar.html;T:	nameI"templates/team/teambar;T:logical_pathI" templates/team/teambar.html;T:content_typeI"text/ng-html;T:sourceI"¨<div id="teambar" class="col-lg-10">
-
-<table id="teambar">
-
-  <tr id="teambar">
-
-
-
-<td ng-repeat="player in team.lineup">
-
-
-  <img class="img-rounded" ng-src="http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/{{player.esbid}}.png"></img></td>
-</tr>
-<tr>
-  <td> <a class="btn btn-success" ui-sref="team.qb" target="_self">Quarterback</a></td>
- <td><a class="btn btn-success"ui-sref="team.rb">Running Back</a></td>
- <td><a class="btn btn-success"ui-sref="team.wr">Wide Receiver</a></td>
- <td><a class="btn btn-success"ui-sref="team.te">Tight End</a></td>
- <td><a class="btn btn-success"ui-sref="team.k">Kicker</a></td>
-
-</tr>
-
-
-
-
-
-
-</table>
-
-</div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Efile-digest://app/assets/javascripts/templates/team/teambar.html;TT:charsetI"
-utf-8;F:digest"%‚Q¾¦59îAÕO‡]0¦‰Ûçdƒ¬o®LË÷Æ:lengthi¨:dependencies_digest"%.ko²Xhœä¤#‰R…¤§ÈiŠU‡AÂON‡‰ÍMÎ:idI"E68692911a691d3af221bf34e3f7b2635b52eded77b6e0c6d77f84c1f3ad47697;F:
-mtimel+I+TX

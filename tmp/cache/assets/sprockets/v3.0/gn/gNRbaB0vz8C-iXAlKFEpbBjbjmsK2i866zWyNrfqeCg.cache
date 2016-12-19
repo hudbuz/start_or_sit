@@ -1,13 +1,0 @@
-{:uriI"file://app/assets/javascripts/templates/players/wr.html?type=text/ng-html&id=99c42c53fd63e0746ed9d6fa128b400be5332fa748ebbfbbce1721d5c134150b:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/wr.html;T:	nameI"templates/players/wr;T:logical_pathI"templates/players/wr.html;T:content_typeI"text/ng-html;T:sourceI"x<div class="player_matchup">
-
-
-
-    <div id="positionTitle"><h2>Wide Receiver</h2></div>
-
-<stats></stats>
-  </div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/wr.html;TT:charsetI"
-utf-8;F:digest"%û±Õ6º¨Õ©|ñ¤hEˆ“Mú¸k	€js!âcErœ:lengthix:dependencies_digest"%÷5@ÔuÂLæ¼IŒJº‹¥Íù±ô§íO·€A™x|ü:idI"E99c42c53fd63e0746ed9d6fa128b400be5332fa748ebbfbbce1721d5c134150b;F:
-mtimel+¬bTX

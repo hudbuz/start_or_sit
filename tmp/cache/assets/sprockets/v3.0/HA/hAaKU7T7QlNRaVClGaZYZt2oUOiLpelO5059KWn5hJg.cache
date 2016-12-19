@@ -1,14 +1,0 @@
-{:uriI"çfile://app/assets/javascripts/templates/players/wr.html?type=text/ng-html&id=627c75415b19ba674005843b15c7c2e27e0a15bd37db4e4122dfc19f25d8cdcd:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/players/wr.html;T:	nameI"templates/players/wr;T:logical_pathI"templates/players/wr.html;T:content_typeI"text/ng-html;T:sourceI"y<div class="player_matchup">
-
-
-
-    <div id="positionTitle"><h2>Wide Receiver</h2></div>
-
-
-<stats></stats>
-  </div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/templates/players/wr.html;TT:charsetI"
-utf-8;F:digest"%Sá{Ô°Ôõ)WÆ ƒßØTSU¬¨ªW˛;@˜√„í:lengthiy:dependencies_digest"%c·Òˆ»>_ˆª¬™lmcw∂„õ‘”4c¿pkı°∑—@:idI"E627c75415b19ba674005843b15c7c2e27e0a15bd37db4e4122dfc19f25d8cdcd;F:
-mtimel+?≠<X

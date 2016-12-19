@@ -1,47 +1,0 @@
-{:uriI"file://app/assets/javascripts/templates/team/teamForm.html?type=text/ng-html&id=d210d0a0d62e549a5100dc7bf3eee3a0ae39ce5d2af0fd80e65847d6866f13e6:ET:load_pathI"app/assets/javascripts;T:filenameI"8app/assets/javascripts/templates/team/teamForm.html;T:	nameI"templates/team/teamForm;T:logical_pathI"!templates/team/teamForm.html;T:content_typeI"text/ng-html;T:sourceI"ÃSelect Your Players
-
-
-
-
-<table style='50%'>
-
-<tr>
-<th> Your Team </th>
-<th> Create Team</th>
-
-</tr>
-<form name="tform">
-<tr id="qb"><td id="qb_pic"><img src="{{team.qb.img_url}}" placeholder="Pick a QB"></td>
- <td><label>QB: <input ng-model="team.qb.name"  ng-change="team.searchFilter('qb')" ng-model-options="{debounce: 500}" required>{{team.qb[0].name}}</input></label></td>
-</tr>
-
-<tr id="rb"><td id="rb_pic"><img src="{{team.rb.img_url}}"></td>
- <td><label>RB: <input ng-model="team.rb.name" ng-change="team.searchFilter('rb')" ng-model-options="{debounce: 500}" required>{{team.rb[0].name}}</input></label></td>
-</tr>
-
-<tr id="wr"><td id="wr_pic"><img src="{{team.wr.img_url}}"></td>
- <td><label>WR: <input ng-model="team.wr.name" ng-change="team.searchFilter('wr')" ng-model-options="{debounce: 500}" required>{{team.wr[0].name}}</input></label></td>
-</tr>
-
-<tr id="te"><td id="te_pic"><img src="{{team.te.img_url}}"></td>
- <td><label>TE: <input ng-model="team.te.name" ng-change="team.searchFilter('te')" ng-model-options="{debounce: 500}" required>{{team.te[0].name}}</input></label></td>
-</tr>
-
-<tr id="k"><td id="k_pic"><img src="{{team.k.img_url}}"></td>
- <td><label>TE: <input ng-model="team.k.name" ng-change="team.searchFilter('k')" ng-model-options="{debounce: 500}" required>{{team.te[0].name}}</input></label></td>
-</tr>
-
-</form>
-</table>
-
-
-
-
-<button ng-click="team.createTeam()">Save Team</button><div ng-show="team.error">
-Must Submit a full team!
-</div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ffile-digest://app/assets/javascripts/templates/team/teamForm.html;TT:charsetI"
-utf-8;F:digest"%™´¾ÌM˜b«Ûw„ª€dèé¶¡OK'õ´Ö:lengthiÃ:dependencies_digest"%ÈÃ@RÁ2lĞıÃGÜú6f¶ŠUå&”™‡HË¿G:idI"Ed210d0a0d62e549a5100dc7bf3eee3a0ae39ce5d2af0fd80e65847d6866f13e6;F:
-mtimel+¢X

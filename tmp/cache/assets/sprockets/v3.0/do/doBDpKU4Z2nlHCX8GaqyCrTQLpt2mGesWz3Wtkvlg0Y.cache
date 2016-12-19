@@ -1,26 +1,0 @@
-{:uriI"Œfile://app/assets/javascripts/templates/team/team.html?type=text/ng-html&id=c59b27c3d3a047e25482b80893e139ad55d34582b270be8ccdff467b048d025d:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/templates/team/team.html;T:	nameI"templates/team/team;T:logical_pathI"templates/team/team.html;T:content_typeI"text/ng-html;T:sourceI"
-
-
-<h4 class="display-4">Welcome {{team.user.username}}</h4>
-
-
-
-
-<div ng-if="team.lineup.length < 1">
-
-  <tform>
-
-  </tform>
-
-</div>
-
-<div ng-if="team.lineup.length > 1">
-
-  <teambar></teambar>
-</div>
-<div class="player-container col-lg-10"><ui-view></ui-view></div>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Bfile-digest://app/assets/javascripts/templates/team/team.html;TT:charsetI"
-utf-8;F:digest"%R®¨whA6Ç™sXÄGlÜÇ–mSõÓş‰8KÊ:ÆR:lengthi:dependencies_digest"%4İÃB¶pSE­Ú7ã%”veòëZ™ÊÃ–£‡[ŠÓ:idI"Ec59b27c3d3a047e25482b80893e139ad55d34582b270be8ccdff467b048d025d;F:
-mtimel+ıeTX
