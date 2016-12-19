@@ -11,6 +11,7 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
   TeamService.getTeam().then(function(data){
     debugger
     console.log('c')
+    debugger
     if (data.status !== 200) {
       $state.go('login')
 
