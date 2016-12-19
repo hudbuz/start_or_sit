@@ -1,15 +1,10 @@
 
-
+<div class="text-center" ng-show="player.compared === true"><h2>Start {{player.left.sosScore > player.right.sosScore? player.left.name: player.right.name}}</h2></div>
 <div id="profiles" class="jumbotron">
 
-  <div class="profile" id="sosButton">
 
-     <button ng-click="player.start_or_sit()">Start or Sit</button>
-     <button ng-click="player.reset()">Reset</button>
 
-  </div>
 
-  <br><br>
 <div class="profile col-md-6 border-box" id="left">
 Your starter<br><input ng-model="player.left.name" ng-change="player.searchFilter('left')" ng-model-options="{debounce: 500}"></input><br>
 

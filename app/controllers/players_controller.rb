@@ -1,9 +1,9 @@
 class PlayersController < ApplicationController
 
-  def index 
+  def index
 
-    @players = Player.all
- 
+    @players = Player.all.offense
+
     render json: @players
 
 
@@ -16,10 +16,10 @@ class PlayersController < ApplicationController
     if params[:id].to_i == 0
 
       @rank = Player.get_D_rank(params[:id])
-   
+
       render json: @rank
     else
-      @player = Player.find(params[:id])  
+      @player = Player.find(params[:id])
       render json: @player
     end
 
@@ -29,4 +29,4 @@ class PlayersController < ApplicationController
 
 
 
-end 
+end

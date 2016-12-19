@@ -1,4 +1,25 @@
-Select 2 Players to Compare!
+<h1 class="heading text-center">Start or Sit</h1>
+
+<h3 class="text-center small">Select 2 Players to Compare!</h3>
+<div class="text-center">
+<div class="btn-group">
+  <button type="button" ng-click="player.switchPosition()" class="btn btn-large btn-primary center-block active">All</button>
+  <button type="button" ng-click="player.switchPosition()"class="btn btn-large btn-primary center-block">QB</button>
+  <button type="button" ng-click="player.switchPosition()"class="btn btn-large btn-primary center-block">RB</button>
+  <button type="button" ng-click="player.switchPosition()"class="btn btn-large btn-primary center-block">WR</button>
+  <button type="button" ng-click="player.switchPosition()"class="btn btn-large btn-primary center-block">TE</button>
+  <button type="button" ng-click="player.switchPosition()"class="btn btn-large btn-primary center-block">K</button>
+  <button type="button" ng-click="player.switchPosition()"class="btn btn-large btn-primary center-block">DEF</button>
+
+
+</div></div>
+
+<div class="text-center">
+
+   <button class="btn btn-success btn-large" ng-click="player.start_or_sit()">Start or Sit</button>
+   <button class="btn btn-success btn-large" visibility="hidden" ng-click="player.reset()">Reset</button>
+
+</div>
 
 
 <compare></compare>

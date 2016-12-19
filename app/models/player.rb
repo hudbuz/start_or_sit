@@ -3,16 +3,18 @@ class Player < ApplicationRecord
 
   has_many :team_players
   has_many :teams, through: :team_players
+  scope :offense, -> {where(position: ['QB', 'RB', 'WR', 'TE', 'DEF', 'K'])}
 
-  @@current_week = 6
+
+  @@current_week = 15
 
   def self.download(playerdata)
     binding.pry
     playerdata.each do |player|
-    if player['esbid'] != false 
+    if player['esbid'] != false
       self.create(name: player['name'], player_id: player['id'], position: player['position'], team_name: player['teamAbbr'], esbid: player['esbid'])
     else
-        self.create(name: player['name'], player_id: player['id'], position: player['position'], team_name: player['teamAbbr']) 
+        self.create(name: player['name'], player_id: player['id'], position: player['position'], team_name: player['teamAbbr'])
     end
 
   end
@@ -26,8 +28,8 @@ class Player < ApplicationRecord
     if p != nil
       p.update(season_points: player['seasonPts'], season_projected_points: player['seasonProjectedPts'], week_projected_points: player['weekProjectedPts'], week_points: player['weekPts'])
 
-    
-    else 
+
+    else
       self.create(name: player['name'], player_id: player['id'], position: player['position'], team_name: player['teamAbbr'], season_points: player['seasonPts'], season_projected_points: player['seasonProjectedPts'], week_projected_points: player['weekProjectedPts'], week_points: player['weekPts'])
     end
   end
@@ -40,8 +42,8 @@ class Player < ApplicationRecord
   rank = 0
 
   players.each_with_index do |team, index|
-   
-    
+
+
     if team.team_name == name
       rank = index + 1
     end

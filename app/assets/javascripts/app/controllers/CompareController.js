@@ -60,7 +60,7 @@
           // })
 
         }
-        debugger
+
         player.listStats = function(side) {
 
         var stats = {}
@@ -143,6 +143,26 @@
             player.compared = true
 
 
+         }
+
+         player.switchPosition = function() {
+           var buttons = $('.btn-group').children()
+           for (i = 0; i < buttons.length; i ++){
+
+             if(buttons[i].classList.contains('active')) {
+               buttons[i].classList.remove('active')
+             }
+           }
+           $('.btn-group').children
+           if (event.target.textContent === 'All'){
+             player.position = null
+             player.filteredList = $filter('filter')(player.data, player.position)
+           }
+           else{
+           player.position = event.target.textContent
+           player.filteredList = $filter('filter')(player.data, player.position)
+         }
+         event.target.classList.add('active')
          }
 
         //  player.switchPlayer = function(side) {
