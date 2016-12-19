@@ -26,7 +26,7 @@ class PlayerDataController < ApplicationController
   end
 
   def get_rank
-    binding.pry
+  
 
   end
 
