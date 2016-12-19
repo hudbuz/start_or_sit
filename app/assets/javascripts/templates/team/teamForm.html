@@ -28,9 +28,11 @@ Select Your Players
 </tr>
 
 <tr id="k"><td id="k_pic"><img src="{{team.k.img_url}}"></td>
- <td><label>TE: <input ng-model="team.k.name" ng-change="team.searchFilter('k')" ng-model-options="{debounce: 500}" required>{{team.te[0].name}}</input></label></td>
+ <td><label>K: <input ng-model="team.k.name" ng-change="team.searchFilter('k')" ng-model-options="{debounce: 500}" required>{{team.k[0].name}}</input></label></td>
 </tr>
-
+<tr id="def"><td id="def_pic"><img src="{{team.def.img_url}}"></td>
+ <td><label>DEF: <input ng-model="team.def.name" ng-change="team.searchFilter('def')" ng-model-options="{debounce: 500}" required>{{team.def[0].name}}</input></label></td>
+</tr>
 </form>
 </table>
 

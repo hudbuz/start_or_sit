@@ -7,11 +7,10 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
 
 
   team.setUp = function() {
-    console.log('b')
+
   TeamService.getTeam().then(function(data){
-    debugger
-    console.log('c')
-    debugger
+
+
     if (data.status !== 200) {
       $state.go('login')
 
@@ -19,22 +18,50 @@ function TeamController($scope, Auth, $state, $$state, players, $filter, TeamSer
     }
     else {
       team.user = Auth.currentUser().$$state.value
-      team.lineup = data.data.players
-      console.log('d')
+      team.organizePlayers(data.data.players)
+
+
+
+
     }
 
   })
-  console.log('e')
+
+}
+team.organizePlayers = function(playerArray){
+  team.lineup = ['','','','','','']
+  for (i = 0; i < playerArray.length; i ++){
+    if (playerArray[i]['position'] === 'QB'){
+      team.lineup[0] = playerArray[i]
+    }
+    else if (playerArray[i]['position'] === 'RB'){
+      team.lineup[1] = playerArray[i]
+    }
+    else if (playerArray[i]['position'] === 'WR'){
+      team.lineup[2] = playerArray[i]
+    }
+    else if (playerArray[i]['position'] === 'TE'){
+      team.lineup[3] = playerArray[i]
+    }
+    else if (playerArray[i]['position'] === 'K'){
+      team.lineup[4] = playerArray[i]
+    }
+    else if (playerArray[i]['position'] === 'DEF'){
+      team.lineup[5] = playerArray[i]
+    }
+  }
 }
 
-console.log('a')
+
 team.setUp()
-console.log('g')
+
 
   team.qb = {}
   team.rb = {}
   team.wr = {}
   team.te = {}
+  team.k = {}
+  team.def = {}
   team['newTeam'] = {}
   team['newTeam']['players'] = {}
   team.players = players.data
@@ -80,7 +107,8 @@ console.log('g')
   }
   }
   $rootScope.$on('changeLineup', function (event, data) {
-    team.lineup = data.data.players
+
+    team.organizePlayers(data.data.players)
 
 
     });
