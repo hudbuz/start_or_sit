@@ -8,7 +8,7 @@
 <div class="profile col-sm-6 border-box" id="left">
 Your starter<br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.left.name" ng-change="player.searchFilter('left')" ng-model-options="{debounce: 750}"></input></div><br>
 
-<img src='{{player.leftstock}}' />
+<img class="img-responsive" src='{{player.leftstock}}' />
 <h3 id="playerTitle">
 {{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
 <div id="lStats">
@@ -55,7 +55,7 @@ Your starter<br><div class="text-center"><input class="input-group input-group-l
 Compared to: <br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.right.name" ng-change="player.searchFilter('right')" ng-model-options="{debounce: 750}"></input></div>
 <br>
 
-  <img src='{{player.rightstock}}'/>
+  <img class="img-responsive" src='{{player.rightstock}}'/>
   <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.team_name}}</h3>
 <h4>Stats</h4>
 
