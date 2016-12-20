@@ -3,7 +3,7 @@ app.controller('CompareController', function($scope, PlayerService, players, ind
 
         var player = this
 
-        var position = null
+        player.position = null
         player.data = players.data
 
 
@@ -18,7 +18,7 @@ app.controller('CompareController', function($scope, PlayerService, players, ind
         player.statTable = indexTable.data
 
 
-        player.filteredList = $filter('filter')(player.data, position)
+        player.filteredList = $filter('filter')(player.data, player.position)
 
         player.comapred = false
         player.substitute = false
@@ -27,7 +27,7 @@ app.controller('CompareController', function($scope, PlayerService, players, ind
         player.searchFilter = function(side) {
           var stock = side + 'stock'
           
-          if (position === null){
+          if (player.position === null){
             player.filteredList = player.data
           }
           if (player[side].name === ''){
@@ -161,7 +161,6 @@ app.controller('CompareController', function($scope, PlayerService, players, ind
            player.filteredList = $filter('filter')(player.data, player.position)
          }
          event.target.classList.add('active')
-
          }
 
         //  player.switchPlayer = function(side) {
