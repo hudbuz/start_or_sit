@@ -34,6 +34,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 source "https://rails-assets.org" do
   gem "rails-assets-angular-devise"
 end
+gem 'ngannotate-rails'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
