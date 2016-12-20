@@ -1,6 +1,5 @@
-(function(){
-  
-  function PlayerService($http) {
+app
+  .service('PlayerService', function($http) {
 
 
     this.getPlayers = function() {
@@ -26,14 +25,8 @@
       return $http.get('http://localhost:3000/players/'+id)
     }
 
-    
 
 
 
-  }
 
-  angular
-    .module('app')
-    .service('PlayerService', PlayerService)
-
-}())
+  })
