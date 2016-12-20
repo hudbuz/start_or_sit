@@ -4,7 +4,7 @@ app.controller('PlayerController', function($scope, $filter, position, PlayerSer
 
     var player = this
     player.data = $scope.$parent.team.players
-    player.current_week = 15
+    player.current_week = 16
     player.left = ""
     player.stock = ""
 

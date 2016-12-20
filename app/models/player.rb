@@ -6,7 +6,7 @@ class Player < ApplicationRecord
   scope :offense, -> {where(position: ['QB', 'RB', 'WR', 'TE', 'DEF', 'K'])}
 
 
-  @@current_week = 15
+  @@current_week = 16
 
   def self.download(playerdata)
     binding.pry
