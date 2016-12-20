@@ -6,13 +6,13 @@
 
 
 <div class="profile col-sm-6 border-box" id="left">
-<p id="playerBoxText"><h4>Your starter</h4></p><br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.left.name" ng-change="player.searchFilter('left')" ng-model-options="{debounce: 750}"></input></div><br>
+<div id="playerBoxText"><h4>Your starter</h4></div><br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.left.name" ng-change="player.searchFilter('left')" ng-model-options="{debounce: 750}"></input></div><br>
 
-<img class="img-responsive" src='{{player.leftstock}}' /><p id="playerBoxText">
+<img class="img-responsive" src='{{player.leftstock}}' /><div id="playerBoxText">
 <h3>
-{{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3></p>
+{{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3></div>
 <div id="lStats">
-<p id="playerBoxText"><h4>Stats</h4></p>
+<div id="playerBoxText"><h4>Stats</h4></div>
 
 <li class="list-group-item">Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
 <li class="list-group-item">Week Points: {{player.left.week_points}} </li>
@@ -51,13 +51,13 @@
 
 
 <div class="profile col-sm-6  " id="right">
-
-<h4 id="playerBoxText">Compared to: </h4><br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.right.name" ng-change="player.searchFilter('right')" ng-model-options="{debounce: 750}"></input></div>
+<div id="playerBoxText">
+<h4 id="playerBoxText">Compared to: </h4></div><br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.right.name" ng-change="player.searchFilter('right')" ng-model-options="{debounce: 750}"></input></div>
 <br>
 
   <img class="img-responsive img-rounded" src='{{player.rightstock}}'/>
-  <p id="playerBoxText"><h3>{{player.right.name}}, {{player.right.position}} - {{player.right.team_name}}</h3></p>
-<p id="playerBoxText"><h4>Stats</h4></p>
+  <div id="playerBoxText"><h3>{{player.right.name}}, {{player.right.position}} - {{player.right.team_name}}</h3></div>
+<div id="playerBoxText"><h4>Stats</h4></div>
 
 <div id="rStats">
 <li class="list-group-item">Week {{player.current_week}}: Projected Points: {{player.right.week_projected_points}} </li>
