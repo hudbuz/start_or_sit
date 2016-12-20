@@ -5,7 +5,8 @@ app = angular
     $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'home.html'
+      templateUrl: 'home.html',
+      controller: 'HomeController'
       })
       .state('compare', {
         url: '/compare',
