@@ -6,13 +6,13 @@
 
 
 <div class="profile col-sm-6 border-box" id="left">
-Your starter<br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.left.name" ng-change="player.searchFilter('left')" ng-model-options="{debounce: 750}"></input></div><br>
+<h4 id="playerBoxText">Your starter</h4><br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.left.name" ng-change="player.searchFilter('left')" ng-model-options="{debounce: 750}"></input></div><br>
 
 <img class="img-responsive" src='{{player.leftstock}}' />
-<h3 id="playerTitle">
+<h3 id="playerBoxText">
 {{player.left.name}}, {{player.left.position}} - {{player.left.team_name}}</h3>
 <div id="lStats">
-<h4>Stats</h4>
+<h4 id="playerBoxText">Stats</h4>
 
 <li class="list-group-item">Week {{player.current_week}}: Projected Points: {{player.left.week_projected_points}} </li>
 <li class="list-group-item">Week Points: {{player.left.week_points}} </li>
@@ -52,12 +52,12 @@ Your starter<br><div class="text-center"><input class="input-group input-group-l
 
 <div class="profile col-sm-6  " id="right">
 
-Compared to: <br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.right.name" ng-change="player.searchFilter('right')" ng-model-options="{debounce: 750}"></input></div>
+<h4 id="playerBoxText">Compared to: </h4><br><div class="text-center"><input class="input-group input-group-lg" ng-model="player.right.name" ng-change="player.searchFilter('right')" ng-model-options="{debounce: 750}"></input></div>
 <br>
 
-  <img class="img-responsive" src='{{player.rightstock}}'/>
-  <h3 id="playerTitle">{{player.right.name}}, {{player.right.position}} - {{player.right.team_name}}</h3>
-<h4>Stats</h4>
+  <img class="img-responsive img-rounded" src='{{player.rightstock}}'/>
+  <h3 id="playerBoxText">{{player.right.name}}, {{player.right.position}} - {{player.right.team_name}}</h3>
+<h4 id="playerBoxText">Stats</h4>
 
 <div id="rStats">
 <li class="list-group-item">Week {{player.current_week}}: Projected Points: {{player.right.week_projected_points}} </li>
