@@ -1,15 +1,7 @@
-function tform() {
+app
+  .directive('teamform',function() {
 
   return {
     templateUrl: 'team/teamForm.html'
-
-
-
-
   }
-
-}
-
-angular
-  .module('app')
-  .directive('tform', tform)
+})

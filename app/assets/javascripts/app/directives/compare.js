@@ -1,11 +1,8 @@
-function compare() {
+app
+.directive('compare', function() {
   return {
   templateUrl: 'compare/comparedir.html'
 
 }
 
-}
-
-angular
-  .module('app')
-  .directive('compare', compare)
+})

@@ -1,11 +1,8 @@
-function stats() {
+app
+  .directive('stats', function() {
   return {
   templateUrl: 'stats/stats.html'
 
 }
 
-}
-
-angular
-  .module('app')
-  .directive('stats', stats)
+})
