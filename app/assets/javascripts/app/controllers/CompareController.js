@@ -26,7 +26,7 @@ app.controller('CompareController', function($scope, PlayerService, players, ind
 
         player.searchFilter = function(side) {
           var stock = side + 'stock'
-          debugger
+          
           if (position === null){
             player.filteredList = player.data
           }
@@ -161,7 +161,7 @@ app.controller('CompareController', function($scope, PlayerService, players, ind
            player.filteredList = $filter('filter')(player.data, player.position)
          }
          event.target.classList.add('active')
-         debugger
+
          }
 
         //  player.switchPlayer = function(side) {
