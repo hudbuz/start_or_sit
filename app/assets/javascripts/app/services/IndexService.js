@@ -3,6 +3,6 @@ app.
 
     this.getIndices = function() {
 
-      return $http.get('http://localhost:3000/indices.json')
+      return $http.get('http://start-or-sit.herokuapp.com/indices.json')
     }
   })

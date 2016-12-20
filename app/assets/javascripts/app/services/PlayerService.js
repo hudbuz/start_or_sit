@@ -4,7 +4,7 @@ app
 
     this.getPlayers = function() {
 
-    return $http.get('http://localhost:3000/players')
+    return $http.get('http://start-or-sit.herokuapp.com/players')
 
 
     }
@@ -22,7 +22,7 @@ app
 
     this.getRank = function(id) {
 
-      return $http.get('http://localhost:3000/players/'+id)
+      return $http.get('http://start-or-sit.herokuapp.com/players/'+id)
     }
 
 
