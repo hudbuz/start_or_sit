@@ -1,6 +1,4 @@
-
-
-  function CompareController($scope, PlayerService, players, indexTable, $filter){
+app.controller('CompareController', function($scope, PlayerService, players, indexTable, $filter){
 
 
         var player = this
@@ -198,7 +196,4 @@
          }
 
 
-  }
-  angular
-    .module('app')
-    .controller('CompareController', CompareController)
+  })

@@ -1,6 +1,4 @@
-(function(){
-
-function PlayerController($scope, $filter, position, PlayerService, $timeout, TeamService, Auth, $rootScope, $state) {
+app.controller('PlayerController', function($scope, $filter, position, PlayerService, $timeout, TeamService, Auth, $rootScope, $state){
 
 
 
@@ -165,10 +163,4 @@ function PlayerController($scope, $filter, position, PlayerService, $timeout, Te
      }
 
 
-}
-
-angular
-  .module('app')
-  .controller('PlayerController', PlayerController)
-
-}())
+})

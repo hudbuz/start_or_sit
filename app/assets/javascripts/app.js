@@ -1,4 +1,4 @@
-angular
+app = angular
   .module('app', ['ui.router', 'templates', 'Devise','ui.bootstrap'])
   .config(function($stateProvider, $urlRouterProvider){
 
@@ -133,7 +133,7 @@ angular
     })
 
 
-      // $urlRouterProvider.otherwise('/compare');
+       $urlRouterProvider.otherwise('/compare');
 
 
   })

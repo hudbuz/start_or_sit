@@ -1,16 +1,17 @@
+app.controller('navCtrl',function($scope, Auth, $state){
 
-function navCtrl($scope, Auth, $state){
+
 
     $scope.signedIn = Auth.isAuthenticated;
     $scope.logout = Auth.logout;
 
     Auth.currentUser().then(function (user){
-        
+
         $scope.user = user;
     });
 
     $scope.$on('devise:new-registration', function (e, user){
-        
+
         $scope.user = user;
     });
 
@@ -23,10 +24,4 @@ function navCtrl($scope, Auth, $state){
         $scope.user = {}
         $state.go('home')
     });
-}
-
-    angular
-    .module('app')
-    .controller('navCtrl', navCtrl)
-
-
+})

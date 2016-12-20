@@ -1,6 +1,5 @@
-(function() {
+app.controller('TeamController', function($scope, Auth, $state, $$state, players, $filter, TeamService, indexTable, $rootScope){
 
-function TeamController($scope, Auth, $state, $$state, players, $filter, TeamService, indexTable, $rootScope) {
 
   var team = this
 
@@ -118,14 +117,4 @@ team.setUp()
 
 
 
-}
-
-
-
-
-
-angular
-  .module('app')
-  .controller('TeamController', TeamController)
-
-}())
+})
