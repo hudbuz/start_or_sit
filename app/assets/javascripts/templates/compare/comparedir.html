@@ -1,5 +1,5 @@
 
-<div class="text-center well" ng-show="player.compared === true"><h2>Start {{player.left.sosScore > player.right.sosScore? player.left.name: player.right.name}}</h2></div>
+<div id="sosReveal" class="text-center" ng-show="player.compared === true"><h2>{{player.left.sosScore > player.right.sosScore?'Start '+ player.left.name + '!':'Start ' +  player.right.name + '!'}}</h2></div>
 <div id="profiles">
 
 
